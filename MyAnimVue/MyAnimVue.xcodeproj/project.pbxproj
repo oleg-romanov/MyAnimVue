@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */; };
+		EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */; };
+		EA195DC72AD99FCB00C8A309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC62AD99FCB00C8A309 /* ViewController.swift */; };
+		EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */; };
+		EA195DCF2AD99FCE00C8A309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */; };
+		EA195DDA2AD99FCF00C8A309 /* MyAnimVueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DD92AD99FCF00C8A309 /* MyAnimVueTests.swift */; };
+		EA195DE42AD99FCF00C8A309 /* MyAnimVueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DE32AD99FCF00C8A309 /* MyAnimVueUITests.swift */; };
+		EA195DE62AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */; };
+		EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */; };
+		EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF62AD9A3AC00C8A309 /* AuthViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA195DD62AD99FCF00C8A309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA195DB72AD99FCB00C8A309 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA195DBE2AD99FCB00C8A309;
+			remoteInfo = MyAnimVue;
+		};
+		EA195DE02AD99FCF00C8A309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA195DB72AD99FCB00C8A309 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA195DBE2AD99FCB00C8A309;
+			remoteInfo = MyAnimVue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA195DBF2AD99FCB00C8A309 /* MyAnimVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA195DC62AD99FCB00C8A309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA195DCE2AD99FCE00C8A309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA195DD02AD99FCE00C8A309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA195DD52AD99FCF00C8A309 /* MyAnimVueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAnimVueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA195DD92AD99FCF00C8A309 /* MyAnimVueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimVueTests.swift; sourceTree = "<group>"; };
+		EA195DDF2AD99FCF00C8A309 /* MyAnimVueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAnimVueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA195DE32AD99FCF00C8A309 /* MyAnimVueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimVueUITests.swift; sourceTree = "<group>"; };
+		EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimVueUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocols.swift; sourceTree = "<group>"; };
+		EA195DF62AD9A3AC00C8A309 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA195DBC2AD99FCB00C8A309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA195DD22AD99FCF00C8A309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA195DDC2AD99FCF00C8A309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA195DB62AD99FCB00C8A309 = {
+			isa = PBXGroup;
+			children = (
+				EA195DC12AD99FCB00C8A309 /* MyAnimVue */,
+				EA195DD82AD99FCF00C8A309 /* MyAnimVueTests */,
+				EA195DE22AD99FCF00C8A309 /* MyAnimVueUITests */,
+				EA195DC02AD99FCB00C8A309 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA195DC02AD99FCB00C8A309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DBF2AD99FCB00C8A309 /* MyAnimVue.app */,
+				EA195DD52AD99FCF00C8A309 /* MyAnimVueTests.xctest */,
+				EA195DDF2AD99FCF00C8A309 /* MyAnimVueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA195DC12AD99FCB00C8A309 /* MyAnimVue */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DF22AD9A32100C8A309 /* Modules */,
+				EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */,
+				EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */,
+				EA195DC62AD99FCB00C8A309 /* ViewController.swift */,
+				EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */,
+				EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */,
+				EA195DD02AD99FCE00C8A309 /* Info.plist */,
+			);
+			path = MyAnimVue;
+			sourceTree = "<group>";
+		};
+		EA195DD82AD99FCF00C8A309 /* MyAnimVueTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DD92AD99FCF00C8A309 /* MyAnimVueTests.swift */,
+			);
+			path = MyAnimVueTests;
+			sourceTree = "<group>";
+		};
+		EA195DE22AD99FCF00C8A309 /* MyAnimVueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DE32AD99FCF00C8A309 /* MyAnimVueUITests.swift */,
+				EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */,
+			);
+			path = MyAnimVueUITests;
+			sourceTree = "<group>";
+		};
+		EA195DF22AD9A32100C8A309 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DF32AD9A32E00C8A309 /* Authorization */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EA195DF32AD9A32E00C8A309 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */,
+				EA195DF62AD9A3AC00C8A309 /* AuthViewController.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA195DBE2AD99FCB00C8A309 /* MyAnimVue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA195DE92AD99FCF00C8A309 /* Build configuration list for PBXNativeTarget "MyAnimVue" */;
+			buildPhases = (
+				EA195DBB2AD99FCB00C8A309 /* Sources */,
+				EA195DBC2AD99FCB00C8A309 /* Frameworks */,
+				EA195DBD2AD99FCB00C8A309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyAnimVue;
+			productName = MyAnimVue;
+			productReference = EA195DBF2AD99FCB00C8A309 /* MyAnimVue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA195DD42AD99FCF00C8A309 /* MyAnimVueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA195DEC2AD99FCF00C8A309 /* Build configuration list for PBXNativeTarget "MyAnimVueTests" */;
+			buildPhases = (
+				EA195DD12AD99FCF00C8A309 /* Sources */,
+				EA195DD22AD99FCF00C8A309 /* Frameworks */,
+				EA195DD32AD99FCF00C8A309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA195DD72AD99FCF00C8A309 /* PBXTargetDependency */,
+			);
+			name = MyAnimVueTests;
+			productName = MyAnimVueTests;
+			productReference = EA195DD52AD99FCF00C8A309 /* MyAnimVueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA195DDE2AD99FCF00C8A309 /* MyAnimVueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA195DEF2AD99FCF00C8A309 /* Build configuration list for PBXNativeTarget "MyAnimVueUITests" */;
+			buildPhases = (
+				EA195DDB2AD99FCF00C8A309 /* Sources */,
+				EA195DDC2AD99FCF00C8A309 /* Frameworks */,
+				EA195DDD2AD99FCF00C8A309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA195DE12AD99FCF00C8A309 /* PBXTargetDependency */,
+			);
+			name = MyAnimVueUITests;
+			productName = MyAnimVueUITests;
+			productReference = EA195DDF2AD99FCF00C8A309 /* MyAnimVueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA195DB72AD99FCB00C8A309 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EA195DBE2AD99FCB00C8A309 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					EA195DD42AD99FCF00C8A309 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EA195DBE2AD99FCB00C8A309;
+					};
+					EA195DDE2AD99FCF00C8A309 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = EA195DBE2AD99FCB00C8A309;
+					};
+				};
+			};
+			buildConfigurationList = EA195DBA2AD99FCB00C8A309 /* Build configuration list for PBXProject "MyAnimVue" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA195DB62AD99FCB00C8A309;
+			productRefGroup = EA195DC02AD99FCB00C8A309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA195DBE2AD99FCB00C8A309 /* MyAnimVue */,
+				EA195DD42AD99FCF00C8A309 /* MyAnimVueTests */,
+				EA195DDE2AD99FCF00C8A309 /* MyAnimVueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA195DBD2AD99FCB00C8A309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA195DCF2AD99FCE00C8A309 /* LaunchScreen.storyboard in Resources */,
+				EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA195DD32AD99FCF00C8A309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA195DDD2AD99FCF00C8A309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA195DBB2AD99FCB00C8A309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA195DC72AD99FCB00C8A309 /* ViewController.swift in Sources */,
+				EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */,
+				EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */,
+				EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */,
+				EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA195DD12AD99FCF00C8A309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA195DDA2AD99FCF00C8A309 /* MyAnimVueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA195DDB2AD99FCF00C8A309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA195DE62AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift in Sources */,
+				EA195DE42AD99FCF00C8A309 /* MyAnimVueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA195DD72AD99FCF00C8A309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA195DBE2AD99FCB00C8A309 /* MyAnimVue */;
+			targetProxy = EA195DD62AD99FCF00C8A309 /* PBXContainerItemProxy */;
+		};
+		EA195DE12AD99FCF00C8A309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA195DBE2AD99FCB00C8A309 /* MyAnimVue */;
+			targetProxy = EA195DE02AD99FCF00C8A309 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA195DCE2AD99FCE00C8A309 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA195DE72AD99FCF00C8A309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA195DE82AD99FCF00C8A309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA195DEA2AD99FCF00C8A309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78U6FZ3GMX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyAnimVue/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oleg-romanov.MyAnimVue";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA195DEB2AD99FCF00C8A309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78U6FZ3GMX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyAnimVue/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oleg-romanov.MyAnimVue";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA195DED2AD99FCF00C8A309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78U6FZ3GMX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oleg-romanov.MyAnimVueTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyAnimVue.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyAnimVue";
+			};
+			name = Debug;
+		};
+		EA195DEE2AD99FCF00C8A309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78U6FZ3GMX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oleg-romanov.MyAnimVueTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyAnimVue.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyAnimVue";
+			};
+			name = Release;
+		};
+		EA195DF02AD99FCF00C8A309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78U6FZ3GMX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oleg-romanov.MyAnimVueUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyAnimVue;
+			};
+			name = Debug;
+		};
+		EA195DF12AD99FCF00C8A309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 78U6FZ3GMX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.oleg-romanov.MyAnimVueUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyAnimVue;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA195DBA2AD99FCB00C8A309 /* Build configuration list for PBXProject "MyAnimVue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA195DE72AD99FCF00C8A309 /* Debug */,
+				EA195DE82AD99FCF00C8A309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA195DE92AD99FCF00C8A309 /* Build configuration list for PBXNativeTarget "MyAnimVue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA195DEA2AD99FCF00C8A309 /* Debug */,
+				EA195DEB2AD99FCF00C8A309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA195DEC2AD99FCF00C8A309 /* Build configuration list for PBXNativeTarget "MyAnimVueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA195DED2AD99FCF00C8A309 /* Debug */,
+				EA195DEE2AD99FCF00C8A309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA195DEF2AD99FCF00C8A309 /* Build configuration list for PBXNativeTarget "MyAnimVueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA195DF02AD99FCF00C8A309 /* Debug */,
+				EA195DF12AD99FCF00C8A309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA195DB72AD99FCB00C8A309 /* Project object */;
+}
