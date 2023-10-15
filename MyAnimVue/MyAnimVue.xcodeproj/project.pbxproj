@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */; };
 		EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */; };
-		EA195DC72AD99FCB00C8A309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC62AD99FCB00C8A309 /* ViewController.swift */; };
 		EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */; };
 		EA195DCF2AD99FCE00C8A309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */; };
 		EA195DDA2AD99FCF00C8A309 /* MyAnimVueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DD92AD99FCF00C8A309 /* MyAnimVueTests.swift */; };
@@ -17,6 +16,19 @@
 		EA195DE62AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */; };
 		EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */; };
 		EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF62AD9A3AC00C8A309 /* AuthViewController.swift */; };
+		EA195E002AD9B10000C8A309 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DFF2AD9B10000C8A309 /* DataParser.swift */; };
+		EA195E042AD9B16E00C8A309 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E032AD9B16E00C8A309 /* RequestProtocol.swift */; };
+		EA195E062AD9B18700C8A309 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E052AD9B18700C8A309 /* RequestType.swift */; };
+		EA195E082AD9B1B400C8A309 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E072AD9B1B400C8A309 /* APIConstants.swift */; };
+		EA195E0A2AD9B1E700C8A309 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E092AD9B1E700C8A309 /* NetworkError.swift */; };
+		EA195E0D2ADA673500C8A309 /* AuthTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E0C2ADA673500C8A309 /* AuthTokenRequest.swift */; };
+		EA195E0F2ADADBE100C8A309 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E0E2ADADBE100C8A309 /* AuthPresenter.swift */; };
+		EA195E142ADC033400C8A309 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E132ADC033300C8A309 /* Keychain.swift */; };
+		EA195E172ADC036E00C8A309 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EA195E162ADC036E00C8A309 /* KeychainSwift */; };
+		EA195E192ADC044400C8A309 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E182ADC044400C8A309 /* Keys.swift */; };
+		EA195E1B2ADC25F200C8A309 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1A2ADC25F200C8A309 /* AuthRouter.swift */; };
+		EA195E1D2ADC266800C8A309 /* AuthControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */; };
+		EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +52,6 @@
 		EA195DBF2AD99FCB00C8A309 /* MyAnimVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA195DC62AD99FCB00C8A309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA195DCE2AD99FCE00C8A309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA195DD02AD99FCE00C8A309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +62,18 @@
 		EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimVueUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocols.swift; sourceTree = "<group>"; };
 		EA195DF62AD9A3AC00C8A309 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		EA195DFF2AD9B10000C8A309 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		EA195E032AD9B16E00C8A309 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		EA195E052AD9B18700C8A309 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		EA195E072AD9B1B400C8A309 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		EA195E092AD9B1E700C8A309 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		EA195E0C2ADA673500C8A309 /* AuthTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenRequest.swift; sourceTree = "<group>"; };
+		EA195E0E2ADADBE100C8A309 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		EA195E132ADC033300C8A309 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		EA195E182ADC044400C8A309 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		EA195E1A2ADC25F200C8A309 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthControllerConfigurator.swift; sourceTree = "<group>"; };
+		EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA195E172ADC036E00C8A309 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,13 +125,11 @@
 		EA195DC12AD99FCB00C8A309 /* MyAnimVue */ = {
 			isa = PBXGroup;
 			children = (
+				EA195DF92AD9A59F00C8A309 /* App */,
 				EA195DF22AD9A32100C8A309 /* Modules */,
-				EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */,
-				EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */,
-				EA195DC62AD99FCB00C8A309 /* ViewController.swift */,
-				EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */,
-				EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */,
-				EA195DD02AD99FCE00C8A309 /* Info.plist */,
+				EA195DF82AD9A55800C8A309 /* Networking */,
+				EA195E122ADC030B00C8A309 /* Service */,
+				EA195E1E2ADC29AD00C8A309 /* Extensions */,
 			);
 			path = MyAnimVue;
 			sourceTree = "<group>";
@@ -142,8 +164,85 @@
 			children = (
 				EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */,
 				EA195DF62AD9A3AC00C8A309 /* AuthViewController.swift */,
+				EA195E0E2ADADBE100C8A309 /* AuthPresenter.swift */,
+				EA195E1A2ADC25F200C8A309 /* AuthRouter.swift */,
+				EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		EA195DF82AD9A55800C8A309 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DFE2AD9B0EF00C8A309 /* Parser */,
+				EA195E012AD9B12300C8A309 /* Network */,
+				EA195E022AD9B13B00C8A309 /* Request */,
+				EA195E072AD9B1B400C8A309 /* APIConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EA195DF92AD9A59F00C8A309 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */,
+				EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */,
+				EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */,
+				EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */,
+				EA195DD02AD99FCE00C8A309 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EA195DFE2AD9B0EF00C8A309 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EA195DFF2AD9B10000C8A309 /* DataParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		EA195E012AD9B12300C8A309 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA195E092AD9B1E700C8A309 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EA195E022AD9B13B00C8A309 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EA195E0B2ADA671E00C8A309 /* Auth */,
+				EA195E032AD9B16E00C8A309 /* RequestProtocol.swift */,
+				EA195E052AD9B18700C8A309 /* RequestType.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		EA195E0B2ADA671E00C8A309 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EA195E0C2ADA673500C8A309 /* AuthTokenRequest.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EA195E122ADC030B00C8A309 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EA195E132ADC033300C8A309 /* Keychain.swift */,
+				EA195E182ADC044400C8A309 /* Keys.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EA195E1E2ADC29AD00C8A309 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +261,9 @@
 			dependencies = (
 			);
 			name = MyAnimVue;
+			packageProductDependencies = (
+				EA195E162ADC036E00C8A309 /* KeychainSwift */,
+			);
 			productName = MyAnimVue;
 			productReference = EA195DBF2AD99FCB00C8A309 /* MyAnimVue.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +336,9 @@
 				Base,
 			);
 			mainGroup = EA195DB62AD99FCB00C8A309;
+			packageReferences = (
+				EA195E152ADC036D00C8A309 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = EA195DC02AD99FCB00C8A309 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,11 +381,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA195DC72AD99FCB00C8A309 /* ViewController.swift in Sources */,
 				EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */,
+				EA195E002AD9B10000C8A309 /* DataParser.swift in Sources */,
+				EA195E062AD9B18700C8A309 /* RequestType.swift in Sources */,
+				EA195E0D2ADA673500C8A309 /* AuthTokenRequest.swift in Sources */,
 				EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */,
+				EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */,
+				EA195E0F2ADADBE100C8A309 /* AuthPresenter.swift in Sources */,
+				EA195E082AD9B1B400C8A309 /* APIConstants.swift in Sources */,
+				EA195E142ADC033400C8A309 /* Keychain.swift in Sources */,
+				EA195E042AD9B16E00C8A309 /* RequestProtocol.swift in Sources */,
+				EA195E0A2AD9B1E700C8A309 /* NetworkError.swift in Sources */,
+				EA195E192ADC044400C8A309 /* Keys.swift in Sources */,
+				EA195E1D2ADC266800C8A309 /* AuthControllerConfigurator.swift in Sources */,
 				EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */,
 				EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */,
+				EA195E1B2ADC25F200C8A309 /* AuthRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +567,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 78U6FZ3GMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyAnimVue/Info.plist;
+				INFOPLIST_FILE = MyAnimVue/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -482,7 +598,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 78U6FZ3GMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyAnimVue/Info.plist;
+				INFOPLIST_FILE = MyAnimVue/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -620,6 +736,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA195E152ADC036D00C8A309 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA195E162ADC036E00C8A309 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA195E152ADC036D00C8A309 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA195DB72AD99FCB00C8A309 /* Project object */;
 }
