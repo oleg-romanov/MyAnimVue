@@ -11,11 +11,15 @@ final class AuthorizationControllerConfigurator {
     
     // MARK:  Instance Methods
     
-    func setupModule() -> AuthViewController {
-        let viewController = AuthViewController()
-        let presenter = AuthPresenter(view: viewController)
-        let router = AuthRouter(viewController: viewController)
-        viewController.setupComponents(presenter: presenter, router: router)
+    func setupModule() -> AuthorizationViewController {
+        let viewController = AuthorizationViewController()
+        let presenter = AuthorizationPresenter(viewController: viewController)
+        let interactor = AuthorizationInteractor(presenter: presenter)
+        let router = AuthorizationRouter(viewController: viewController)
+        viewController.setupComponents(
+            interactor: interactor,
+            router: router
+        )
         return viewController
     }
 }

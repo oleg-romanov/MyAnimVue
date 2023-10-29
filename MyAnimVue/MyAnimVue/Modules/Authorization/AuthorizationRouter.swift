@@ -1,13 +1,13 @@
 //
-//  AuthRouter.swift
+//  AuthorizationRouter.swift
 //  MyAnimVue
 //
-//  Created by Олег Романов on 15.10.2023.
+//  Created by Олег Романов on 29.10.2023.
 //
 
 import UIKit
 
-final class AuthRouter: AuthRoutingLogic {
+final class AuthorizationRouter: AuthorizationRoutingLogic {
     
     // MARK: - Instance Properties
 
