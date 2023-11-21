@@ -24,8 +24,12 @@ final class Keychain {
         return keychain.set(value, forKey: key)
     }
     
-    func saveSessionId(value: String) -> Bool {
+    func saveAnilibSessionId(value: String) -> Bool {
         return keychain.set(value, forKey: Keys.sessionId)
+    }
+    
+    func saveShikimoriAuthCode(value: String) -> Bool {
+        return keychain.set(value, forKey: Keys.shikimoriAuthCode)
     }
     
     // MARK:  Get Values
@@ -34,8 +38,12 @@ final class Keychain {
         return keychain.get(key)
     }
     
-    func getSessionId() -> String? {
+    func getAnilibSessionId() -> String? {
         return keychain.get(Keys.sessionId)
+    }
+    
+    func getShikimoriAuthCode() -> String? {
+        return keychain.get(Keys.shikimoriAuthCode)
     }
     
     // MARK:  Get all keyes
@@ -50,8 +58,12 @@ final class Keychain {
         return keychain.delete(key)
     }
     
-    func deleteSessionId() -> Bool {
+    func deleteAnilibSessionId() -> Bool {
         return keychain.delete(Keys.sessionId)
+    }
+    
+    func deleteShikimoriAuthCode() -> Bool {
+        return keychain.delete(Keys.shikimoriAuthCode)
     }
     
     // MARK:  Delete all values from keychain

@@ -8,6 +8,10 @@
 import UIKit
 import WebKit
 
+protocol AuthDelegate: AnyObject {
+    func result(isSuccess: Bool)
+}
+
 class AuthorizationViewController: UIViewController {
     
     // MARK: - Constants
@@ -26,6 +30,8 @@ class AuthorizationViewController: UIViewController {
         static let anilibriaLabelText = "Anilibria"
         static let shikimoriLabelText = "Shikimori"
         static let startButtonTitle = "Начать"
+        static let anilibriaUrl = "https://zerkalo.anilib.top/pages/login.php"
+        static let shikimoriUrl = "https://shikimori.one/oauth/authorize?client_id=Wfh14ofSdXt5bqTMgdXEaJQpuNZVUxiL86M0VUSF-5E&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=user_rates+comments+topics"
     }
     
     // MARK: - Appearance
@@ -43,6 +49,12 @@ class AuthorizationViewController: UIViewController {
     private var router: AuthorizationRoutingLogic!
     
     private let appearance = Appearance()
+    
+    private var anilibriaWasCalled: Bool = false
+    private var shikimoriWasCalled: Bool = false
+    
+    private var loggedInToAnilibria: Bool = false
+    private var loggedInToShikimori: Bool = false
     
     private lazy var applicationLogoView: UIImageView = {
         let imageView = UIImageView()
@@ -110,6 +122,7 @@ class AuthorizationViewController: UIViewController {
         button.setTitleColor(UIColor(named: Constants.signInButtonColor), for: .normal)
         button.titleLabel?.font = UIFont.boldText
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(anilibriaLoginButtonDidPress), for: .touchUpInside)
         return button
     }()
     
@@ -120,12 +133,14 @@ class AuthorizationViewController: UIViewController {
         button.setTitleColor(UIColor(named: Constants.signInButtonColor), for: .normal)
         button.titleLabel?.font = UIFont.boldText
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(shikimoriLoginButtonDidPress), for: .touchUpInside)
         return button
     }()
     
     private lazy var startButton: StartButton = {
         let button = StartButton(title: Constants.startButtonTitle)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(startButtonDidPress), for: .touchUpInside)
         return button
     }()
     
@@ -167,7 +182,7 @@ class AuthorizationViewController: UIViewController {
     
     private func makeConstraints() {
         NSLayoutConstraint.activate([
-            applicationLogoView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 46),
+            applicationLogoView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: appearance.xxlSpace - 2),
             applicationLogoView.widthAnchor.constraint(equalToConstant: appearance.applicationLogoWidth),
             applicationLogoView.heightAnchor.constraint(equalTo: applicationLogoView.widthAnchor),
             applicationLogoView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -209,9 +224,45 @@ class AuthorizationViewController: UIViewController {
             startButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -appearance.xxsSpace)
         ])
     }
+    
+    // MARK: - Actions
+    
+    @objc private func anilibriaLoginButtonDidPress() {
+        anilibriaWasCalled = true
+        router.routeToWebView(by: Constants.anilibriaUrl, from: self)
+    }
+    
+    @objc private func shikimoriLoginButtonDidPress() {
+        shikimoriWasCalled = true
+        router.routeToWebView(by: Constants.shikimoriUrl, from: self)
+    }
+    
+    @objc private func startButtonDidPress() {
+        if (startButton.isActive) {
+            router.routeToTabbar()
+        }
+    }
 }
 
-extension AuthorizationViewController: AuthorizationViewDisplayLogic {
+extension AuthorizationViewController: AuthorizationViewDisplayLogic, AuthDelegate {
+    func result(isSuccess: Bool) {
+        if (isSuccess) {
+            if (anilibriaWasCalled) {
+                loggedInToAnilibria = true
+                checkmarkAnilibriaCircleView.image = UIImage(named: Constants.checkmarkStateOnName)
+            }
+            if (shikimoriWasCalled) {
+                loggedInToShikimori = true
+                checkmarkShikimoriCircleView.image = UIImage(named: Constants.checkmarkStateOnName)
+            }
+        }
+        anilibriaWasCalled = false
+        shikimoriWasCalled = false
+        if (loggedInToAnilibria && loggedInToShikimori) {
+            startButton.setActive()
+        }
+    }
+    
     func displaySuccess() {
         // TODO: Display logic
     }

@@ -29,4 +29,11 @@ final class AuthorizationRouter: AuthorizationRoutingLogic {
             window.rootViewController = tabbar
         }
     }
+    
+    func routeToWebView(by urlString: String, from: AuthorizationViewController) {
+        let webViewController = WebViewControllerConfigurator().setupModule(with: urlString)
+        webViewController.delegate = from
+        let navController = UINavigationController(rootViewController: webViewController)
+        viewController.present(navController, animated: true, completion: nil)
+    }
 }

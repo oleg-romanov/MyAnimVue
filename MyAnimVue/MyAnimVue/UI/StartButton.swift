@@ -20,10 +20,12 @@ class StartButton: UIButton {
     
     // MARK:  Instance Properties
     
-    private var isActive: Bool = false {
+    private(set) var isActive: Bool = false {
         didSet {
             if (isActive) {
-                backgroundColor = UIColor(named: Constants.activeBackgroundColor)
+                UIView.animate(withDuration: 1, delay: 0.7, options: .curveEaseOut) {
+                    self.backgroundColor = UIColor(named: Constants.activeBackgroundColor)
+                }
             }
         }
     }

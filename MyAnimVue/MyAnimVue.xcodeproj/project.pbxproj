@@ -14,7 +14,7 @@
 		EA195DDA2AD99FCF00C8A309 /* MyAnimVueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DD92AD99FCF00C8A309 /* MyAnimVueTests.swift */; };
 		EA195DE42AD99FCF00C8A309 /* MyAnimVueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DE32AD99FCF00C8A309 /* MyAnimVueUITests.swift */; };
 		EA195DE62AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */; };
-		EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */; };
+		EA195DF52AD9A34C00C8A309 /* AuthorizationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF42AD9A34C00C8A309 /* AuthorizationProtocols.swift */; };
 		EA195DF72AD9A3AC00C8A309 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DF62AD9A3AC00C8A309 /* AuthorizationViewController.swift */; };
 		EA195E002AD9B10000C8A309 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DFF2AD9B10000C8A309 /* DataParser.swift */; };
 		EA195E042AD9B16E00C8A309 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E032AD9B16E00C8A309 /* RequestProtocol.swift */; };
@@ -27,6 +27,11 @@
 		EA195E192ADC044400C8A309 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E182ADC044400C8A309 /* Keys.swift */; };
 		EA195E1D2ADC266800C8A309 /* AuthControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */; };
 		EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */; };
+		EA59E0192B0D2D0200A49694 /* WebViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */; };
+		EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */; };
+		EA5B15622AF170D300E56A26 /* WebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15612AF170D300E56A26 /* WebViewInteractor.swift */; };
+		EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15632AF1712500E56A26 /* WebViewProtocols.swift */; };
+		EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */; };
 		EA9E4BD22AEC16D700D00A7B /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BD12AEC16D700D00A7B /* AuthorizationInteractor.swift */; };
 		EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */; };
 		EA9E4BDF2AEC39E600D00A7B /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */; };
@@ -36,6 +41,7 @@
 		EA9E4BE92AECF57C00D00A7B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BE82AECF57C00D00A7B /* Grid.swift */; };
 		EA9E4BEB2AEE371B00D00A7B /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BEA2AEE371B00D00A7B /* AuthorizationRouter.swift */; };
 		EA9E4BED2AEE37F100D00A7B /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BEC2AEE37F100D00A7B /* AuthorizationPresenter.swift */; };
+		EA9E4BEF2AEE50B700D00A7B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BEE2AEE50B700D00A7B /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +73,7 @@
 		EA195DDF2AD99FCF00C8A309 /* MyAnimVueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAnimVueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA195DE32AD99FCF00C8A309 /* MyAnimVueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimVueUITests.swift; sourceTree = "<group>"; };
 		EA195DE52AD99FCF00C8A309 /* MyAnimVueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAnimVueUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocols.swift; sourceTree = "<group>"; };
+		EA195DF42AD9A34C00C8A309 /* AuthorizationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationProtocols.swift; sourceTree = "<group>"; };
 		EA195DF62AD9A3AC00C8A309 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		EA195DFF2AD9B10000C8A309 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		EA195E032AD9B16E00C8A309 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
@@ -79,6 +85,11 @@
 		EA195E182ADC044400C8A309 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthControllerConfigurator.swift; sourceTree = "<group>"; };
 		EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerConfigurator.swift; sourceTree = "<group>"; };
+		EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
+		EA5B15612AF170D300E56A26 /* WebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewInteractor.swift; sourceTree = "<group>"; };
+		EA5B15632AF1712500E56A26 /* WebViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewProtocols.swift; sourceTree = "<group>"; };
+		EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		EA9E4BD12AEC16D700D00A7B /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
 		EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
@@ -88,6 +99,7 @@
 		EA9E4BE82AECF57C00D00A7B /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		EA9E4BEA2AEE371B00D00A7B /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
 		EA9E4BEC2AEE37F100D00A7B /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
+		EA9E4BEE2AEE50B700D00A7B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,12 +191,13 @@
 		EA195DF32AD9A32E00C8A309 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				EA195DF42AD9A34C00C8A309 /* AuthProtocols.swift */,
+				EA195DF42AD9A34C00C8A309 /* AuthorizationProtocols.swift */,
+				EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */,
 				EA195DF62AD9A3AC00C8A309 /* AuthorizationViewController.swift */,
 				EA9E4BD12AEC16D700D00A7B /* AuthorizationInteractor.swift */,
-				EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */,
-				EA9E4BEA2AEE371B00D00A7B /* AuthorizationRouter.swift */,
 				EA9E4BEC2AEE37F100D00A7B /* AuthorizationPresenter.swift */,
+				EA9E4BEA2AEE371B00D00A7B /* AuthorizationRouter.swift */,
+				EA9E4BF02AEE5B1F00D00A7B /* WebView */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -288,6 +301,19 @@
 				EA9E4BE82AECF57C00D00A7B /* Grid.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA9E4BF02AEE5B1F00D00A7B /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				EA5B15632AF1712500E56A26 /* WebViewProtocols.swift */,
+				EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */,
+				EA9E4BEE2AEE50B700D00A7B /* WebViewController.swift */,
+				EA5B15612AF170D300E56A26 /* WebViewInteractor.swift */,
+				EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */,
+				EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,14 +455,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */,
+				EA195DF52AD9A34C00C8A309 /* AuthorizationProtocols.swift in Sources */,
 				EA195E002AD9B10000C8A309 /* DataParser.swift in Sources */,
 				EA195E062AD9B18700C8A309 /* RequestType.swift in Sources */,
 				EA9E4BE92AECF57C00D00A7B /* Grid.swift in Sources */,
+				EA5B15622AF170D300E56A26 /* WebViewInteractor.swift in Sources */,
+				EA9E4BEF2AEE50B700D00A7B /* WebViewController.swift in Sources */,
+				EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */,
 				EA195E0D2ADA673500C8A309 /* AuthTokenRequest.swift in Sources */,
 				EA9E4BD22AEC16D700D00A7B /* AuthorizationInteractor.swift in Sources */,
 				EA195DF72AD9A3AC00C8A309 /* AuthorizationViewController.swift in Sources */,
+				EA59E0192B0D2D0200A49694 /* WebViewControllerConfigurator.swift in Sources */,
 				EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */,
+				EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */,
 				EA195E082AD9B1B400C8A309 /* APIConstants.swift in Sources */,
 				EA195E142ADC033400C8A309 /* Keychain.swift in Sources */,
 				EA195E042AD9B16E00C8A309 /* RequestProtocol.swift in Sources */,
@@ -446,6 +477,7 @@
 				EA9E4BEB2AEE371B00D00A7B /* AuthorizationRouter.swift in Sources */,
 				EA195E1D2ADC266800C8A309 /* AuthControllerConfigurator.swift in Sources */,
 				EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */,
+				EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */,
 				EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */,
 				EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */,
 				EA9E4BE42AECEB4300D00A7B /* StartButton.swift in Sources */,

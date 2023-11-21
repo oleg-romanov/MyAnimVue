@@ -13,7 +13,7 @@ enum AuthTokenRequest: RequestProtocol {
     }
 
     var path: String {
-      "pages/login.php"
+        "pages/login.php"
     }
 
 //    var params: [String: Any] {
@@ -24,10 +24,10 @@ enum AuthTokenRequest: RequestProtocol {
 //    }
 
     var addAuthorizationToken: Bool {
-      false
+        false
     }
 
     var requestType: RequestType {
-      .POST
+        .POST
     }
 }
