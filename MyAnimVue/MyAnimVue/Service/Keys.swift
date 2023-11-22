@@ -10,4 +10,5 @@ import Foundation
 struct Keys {
     static let keyPrefix = "your key prefix here"
     static let sessionId = "your session id here"
+    static let shikimoriAuthCode = "your auth code here"
 }
