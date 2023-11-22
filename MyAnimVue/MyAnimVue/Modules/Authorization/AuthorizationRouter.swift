@@ -1,13 +1,13 @@
 //
-//  AuthRouter.swift
+//  AuthorizationRouter.swift
 //  MyAnimVue
 //
-//  Created by Олег Романов on 15.10.2023.
+//  Created by Олег Романов on 29.10.2023.
 //
 
 import UIKit
 
-final class AuthRouter: AuthRoutingLogic {
+final class AuthorizationRouter: AuthorizationRoutingLogic {
     
     // MARK: - Instance Properties
 
@@ -28,5 +28,12 @@ final class AuthRouter: AuthRoutingLogic {
         UIWindow.transition(with: window, duration: 0.3, options: .transitionCrossDissolve) {
             window.rootViewController = tabbar
         }
+    }
+    
+    func routeToWebView(by urlString: String, from: AuthorizationViewController) {
+        let webViewController = WebViewControllerConfigurator().setupModule(with: urlString)
+        webViewController.delegate = from
+        let navController = UINavigationController(rootViewController: webViewController)
+        viewController.present(navController, animated: true, completion: nil)
     }
 }
