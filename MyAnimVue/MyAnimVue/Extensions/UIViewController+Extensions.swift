@@ -17,6 +17,26 @@ extension UIViewController {
               let delegate = windowScene.delegate as? SceneDelegate else { return nil }
         return delegate
     }
+    
+    func showLoading() {
+        guard let window = window else {
+            assertionFailure("Can't get window")
+            return
+        }
+        let loadingView = LoadingView(frame: UIScreen.main.bounds)
+        window.addSubview(loadingView)
+        window.bringSubviewToFront(loadingView)
+    }
+    
+    func hideLoading() {
+        guard let window = window else {
+            assertionFailure("Can't get window")
+            return
+        }
+        window.subviews
+            .filter { $0 is LoadingView }
+            .forEach { $0.removeFromSuperview() }
+    }
 }
 
 extension UIViewController {

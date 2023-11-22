@@ -45,7 +45,6 @@ class AuthorizationViewController: UIViewController {
     
     // MARK: - Instance Properties
     
-    private var interactor: AuthorizationBusinessLogic!
     private var router: AuthorizationRoutingLogic!
     
     private let appearance = Appearance()
@@ -156,10 +155,8 @@ class AuthorizationViewController: UIViewController {
     // MARK: - Setup
 
     func setupComponents(
-        interactor: AuthorizationBusinessLogic,
         router: AuthorizationRoutingLogic
     ) {
-        self.interactor = interactor
         self.router = router
     }
     
@@ -228,11 +225,13 @@ class AuthorizationViewController: UIViewController {
     // MARK: - Actions
     
     @objc private func anilibriaLoginButtonDidPress() {
+        showLoading()
         anilibriaWasCalled = true
         router.routeToWebView(by: Constants.anilibriaUrl, from: self)
     }
     
     @objc private func shikimoriLoginButtonDidPress() {
+        showLoading()
         shikimoriWasCalled = true
         router.routeToWebView(by: Constants.shikimoriUrl, from: self)
     }
@@ -246,6 +245,7 @@ class AuthorizationViewController: UIViewController {
 
 extension AuthorizationViewController: AuthorizationViewDisplayLogic, AuthDelegate {
     func result(isSuccess: Bool) {
+        hideLoading()
         if (isSuccess) {
             if (anilibriaWasCalled) {
                 loggedInToAnilibria = true

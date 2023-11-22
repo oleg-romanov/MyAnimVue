@@ -28,6 +28,8 @@ class WebViewController: UIViewController {
     
     private var sessionIdIsFound = false
     
+    private var observation: NSKeyValueObservation? = nil
+    
     private let webView: WKWebView = {
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false
@@ -35,6 +37,12 @@ class WebViewController: UIViewController {
     }()
     
     weak var delegate: AuthDelegate?
+    
+    private let progressView: UIProgressView = {
+        let progressView = UIProgressView()
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        return progressView
+    }()
     
     // MARK:  Initializers
     
@@ -52,10 +60,14 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.presentationController?.delegate = self
+        webView.navigationDelegate = self
         addSubviews()
         makeConstraints()
         setup()
-        webView.navigationDelegate = self
+    }
+    
+    deinit {
+        observation = nil
     }
     
     // MARK: Setup
@@ -80,6 +92,7 @@ class WebViewController: UIViewController {
         
         guard let url = URL(string: urlString) else {
             // TODO: Обработать ошибку
+            delegate?.result(isSuccess: false)
             router.dismissController()
             return
         }
@@ -91,11 +104,20 @@ class WebViewController: UIViewController {
             options: .new,
             context: nil
         )
+        observation = webView.observe(
+            \.estimatedProgress,
+             options: [.new]) { _, _ in
+                 self.progressView.progress = Float(self.webView.estimatedProgress)
+                 if (self.webView.estimatedProgress == 1.0) {
+                    self.progressView.isHidden = true
+                 }
+        }
         checkDocumentOnAuthCode()
     }
     
     private func addSubviews() {
         view.addSubview(webView)
+        view.addSubview(progressView)
     }
     
     private func makeConstraints() {
@@ -103,7 +125,10 @@ class WebViewController: UIViewController {
             webView.leadingAnchor.constraint(equalTo: super.view.leadingAnchor),
             webView.topAnchor.constraint(equalTo: super.view.topAnchor),
             webView.trailingAnchor.constraint(equalTo: super.view.trailingAnchor),
-            webView.bottomAnchor.constraint(equalTo: super.view.bottomAnchor)
+            webView.bottomAnchor.constraint(equalTo: super.view.bottomAnchor),
+            
+            progressView.widthAnchor.constraint(equalTo: webView.widthAnchor),
+            progressView.topAnchor.constraint(equalTo: webView.safeAreaLayoutGuide.topAnchor)
         ])
     }
     
@@ -155,7 +180,7 @@ extension WebViewController: UIAdaptivePresentationControllerDelegate {
 // MARK:  WKNavigationDelegate
 
 extension WebViewController: WKNavigationDelegate {
-
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         checkDocumentOnAuthCode()
     }
@@ -164,6 +189,7 @@ extension WebViewController: WKNavigationDelegate {
 // MARK:  WebViewDisplayLogic
 
 extension WebViewController: WebViewDisplayLogic {
+    
     func displaySuccess() {
         delegate?.result(isSuccess: true)
         router.dismissController()
