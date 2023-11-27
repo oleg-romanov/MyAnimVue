@@ -18,5 +18,4 @@ protocol AuthorizationViewDisplayLogic: AnyObject {
 protocol AuthorizationRoutingLogic: AnyObject {
     func routeToTabbar()
     func routeToWebView(by urlString: String, from: AuthorizationViewController)
-    
 }
