@@ -12,4 +12,4 @@
 2. Создайте файл Config.plist:
 
     - В папке App создайте файл `Config.plist`
-    - Добавьте ключи CLIENT_ID и CLIENT_SECRET и значения для них
+    - Добавьте ключи `CLIENT_ID` и `CLIENT_SECRET` и значения для них
