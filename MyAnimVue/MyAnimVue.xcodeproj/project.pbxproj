@@ -30,6 +30,7 @@
 		EA59E0192B0D2D0200A49694 /* WebViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */; };
 		EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */; };
 		EA59E01D2B0DE70C00A49694 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01C2B0DE70C00A49694 /* LoadingView.swift */; };
+		EA59E01F2B0E08F600A49694 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA59E01E2B0E08F600A49694 /* Nunito-ExtraBold.ttf */; };
 		EA5B15622AF170D300E56A26 /* WebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15612AF170D300E56A26 /* WebViewInteractor.swift */; };
 		EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15632AF1712500E56A26 /* WebViewProtocols.swift */; };
 		EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */; };
@@ -87,6 +88,7 @@
 		EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerConfigurator.swift; sourceTree = "<group>"; };
 		EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
 		EA59E01C2B0DE70C00A49694 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		EA59E01E2B0E08F600A49694 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		EA5B15612AF170D300E56A26 /* WebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewInteractor.swift; sourceTree = "<group>"; };
 		EA5B15632AF1712500E56A26 /* WebViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewProtocols.swift; sourceTree = "<group>"; };
 		EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		EA9E4BD52AEC37E200D00A7B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EA59E01E2B0E08F600A49694 /* Nunito-ExtraBold.ttf */,
 				EA9E4BE52AECF24200D00A7B /* Nunito-SemiBold.ttf */,
 				EA9E4BE02AEC3B8700D00A7B /* Nunito-Medium.ttf */,
 				EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */,
@@ -426,6 +429,7 @@
 				EA9E4BDF2AEC39E600D00A7B /* Nunito-Bold.ttf in Resources */,
 				EA9E4BE12AEC3B8700D00A7B /* Nunito-Medium.ttf in Resources */,
 				EA195DCF2AD99FCE00C8A309 /* LaunchScreen.storyboard in Resources */,
+				EA59E01F2B0E08F600A49694 /* Nunito-ExtraBold.ttf in Resources */,
 				EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */,
 				EA9E4BE62AECF24200D00A7B /* Nunito-SemiBold.ttf in Resources */,
 			);
