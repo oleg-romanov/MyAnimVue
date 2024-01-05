@@ -27,6 +27,7 @@
 		EA195E192ADC044400C8A309 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E182ADC044400C8A309 /* Keys.swift */; };
 		EA195E1D2ADC266800C8A309 /* AuthControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */; };
 		EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */; };
+		EA3D310A2B48335000D637A8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3D31092B48334F00D637A8 /* Config.plist */; };
 		EA59E0192B0D2D0200A49694 /* WebViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */; };
 		EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */; };
 		EA59E01D2B0DE70C00A49694 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01C2B0DE70C00A49694 /* LoadingView.swift */; };
@@ -85,6 +86,7 @@
 		EA195E182ADC044400C8A309 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EA195E1C2ADC266800C8A309 /* AuthControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthControllerConfigurator.swift; sourceTree = "<group>"; };
 		EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		EA3D31092B48334F00D637A8 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		EA59E0182B0D2D0200A49694 /* WebViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerConfigurator.swift; sourceTree = "<group>"; };
 		EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
 		EA59E01C2B0DE70C00A49694 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				EA195DCD2AD99FCE00C8A309 /* LaunchScreen.storyboard */,
 				EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */,
 				EA195DD02AD99FCE00C8A309 /* Info.plist */,
+				EA3D31092B48334F00D637A8 /* Config.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				EA59E01F2B0E08F600A49694 /* Nunito-ExtraBold.ttf in Resources */,
 				EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */,
 				EA9E4BE62AECF24200D00A7B /* Nunito-SemiBold.ttf in Resources */,
+				EA3D310A2B48335000D637A8 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
