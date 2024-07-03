@@ -9,31 +9,23 @@ import Foundation
 
 final class WebViewInteractor: WebViewBusinessLogic {
     
-    // MARK: - Instance Properties
+    // MARK: Instance Properties
 
-    private let presenter: WebViewPresentationLogic
+    weak var presenter: WebViewPresentationLogic!
     
-    // MARK: - Initializers
-    
-    init(presenter: WebViewPresentationLogic) {
-        self.presenter = presenter
-    }
+    // MARK: Instance Methods
     
     func saveSessionIdForAnilibria(with value: String) {
         let result = Keychain.service.saveAnilibSessionId(value: value)
-        if (result) {
-            presenter.presentSuccess()
-        } else {
-            presenter.presentError()
-        }
+        check(result: result, from: "Anilibria")
     }
     
-    func saveTokensForShikimori(with value: String) {
+    func saveTokenForShikimori(with value: String) {
         let result = Keychain.service.saveShikimoriAuthCode(value: value)
-        if (result) {
-            presenter.presentSuccess()
-        } else {
-            presenter.presentError()
-        }
+        check(result: result, from: "Shikimori")
+    }
+    
+    private func check(result: Bool, from: String) {
+        result ? presenter.presentSuccess() : presenter.presentError(with: "An error occurred while saving the \(from) token.")
     }
 }

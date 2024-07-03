@@ -9,21 +9,26 @@ import UIKit
 
 protocol WebViewBusinessLogic: AnyObject {
     func saveSessionIdForAnilibria(with value: String)
-    func saveTokensForShikimori(with value: String)
+    func saveTokenForShikimori(with value: String)
 }
 
 protocol WebViewPresentationLogic: AnyObject {
+    func saveSessionIdForAnilibria(with value: String)
+    func saveTokenForShikimori(with value: String)
+    
     func presentSuccess()
-    func presentError()
+    func presentError(with message: String)
+    
+    func dismissController()
+    func presentController(controller: NSObject)
 }
 
 protocol WebViewDisplayLogic: AnyObject {
     func displaySuccess()
-    func displayErrorAlert()
+    func displayErrorAlert(with message: String)
 }
 
 protocol WebViewRoutingLogic: AnyObject {
-    func dismissController(with completion: @escaping () -> Void)
     func dismissController()
-    func presentController(viewController: UIViewController)
+    func presentController(controller: NSObject)
 }

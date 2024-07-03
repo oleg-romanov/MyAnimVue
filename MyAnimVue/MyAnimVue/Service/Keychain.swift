@@ -12,13 +12,13 @@ final class Keychain {
     
     private init() {}
     
-    // MARK:  Properties
+    // MARK: Properties
     
     public static let service = Keychain()
     
     private let keychain = KeychainSwift(keyPrefix: Keys.keyPrefix)
     
-    // MARK:  Save Values
+    // MARK: Save Values
     
     func save(value: String, for key: String) -> Bool {
         return keychain.set(value, forKey: key)
@@ -32,7 +32,7 @@ final class Keychain {
         return keychain.set(value, forKey: Keys.shikimoriAuthCode)
     }
     
-    // MARK:  Get Values
+    // MARK: Get Values
     
     func getValue(for key: String) -> String? {
         return keychain.get(key)
@@ -46,13 +46,13 @@ final class Keychain {
         return keychain.get(Keys.shikimoriAuthCode)
     }
     
-    // MARK:  Get all keyes
+    // MARK: Get all keyes
     
     func getAllKeys() -> [String] {
         return keychain.allKeys
     }
     
-    // MARK:  Delete values
+    // MARK: Delete values
     
     func deleteValue(for key: String) -> Bool {
         return keychain.delete(key)
@@ -66,7 +66,7 @@ final class Keychain {
         return keychain.delete(Keys.shikimoriAuthCode)
     }
     
-    // MARK:  Delete all values from keychain
+    // MARK: Delete all values from keychain
     
     func clearKeychain() -> Bool {
         return keychain.clear()

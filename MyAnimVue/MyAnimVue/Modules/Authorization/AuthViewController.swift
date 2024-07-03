@@ -12,9 +12,9 @@ protocol AuthDelegate: AnyObject {
     func result(isSuccess: Bool)
 }
 
-class AuthorizationViewController: UIViewController {
+class AuthViewController: UIViewController {
     
-    // MARK: - Constants
+    // MARK: Constants
     
     private enum Constants {
         static let logoImageName = "AppLogoMini"
@@ -34,7 +34,7 @@ class AuthorizationViewController: UIViewController {
         static let shikimoriUrl = "https://shikimori.one/oauth/authorize?client_id=Wfh14ofSdXt5bqTMgdXEaJQpuNZVUxiL86M0VUSF-5E&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=user_rates+comments+topics"
     }
     
-    // MARK: - Appearance
+    // MARK: Appearance
 
     private struct Appearance: Grid {
         let applicationLogoWidth: CGFloat = 150
@@ -43,17 +43,11 @@ class AuthorizationViewController: UIViewController {
         let startButtonHeight: CGFloat = 60
     }
     
-    // MARK: - Instance Properties
+    // MARK: Instance Properties
     
-    private var router: AuthorizationRoutingLogic!
+    var presenter: AuthPresentationLogic!
     
     private let appearance = Appearance()
-    
-    private var anilibriaWasCalled: Bool = false
-    private var shikimoriWasCalled: Bool = false
-    
-    private var loggedInToAnilibria: Bool = false
-    private var loggedInToShikimori: Bool = false
     
     private lazy var applicationLogoView: UIImageView = {
         let imageView = UIImageView()
@@ -143,7 +137,7 @@ class AuthorizationViewController: UIViewController {
         return button
     }()
     
-    // MARK:  Lifecycle
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -152,13 +146,7 @@ class AuthorizationViewController: UIViewController {
         makeConstraints()
     }
     
-    // MARK: - Setup
-
-    func setupComponents(
-        router: AuthorizationRoutingLogic
-    ) {
-        self.router = router
-    }
+    // MARK: Setup
     
     private func setupView() {
         view.backgroundColor = UIColor(named: Constants.viewBackgroundColor)
@@ -176,6 +164,8 @@ class AuthorizationViewController: UIViewController {
         view.addSubview(checkmarkShikimoriCircleView)
         view.addSubview(startButton)
     }
+    
+    // MARK: Constraints
     
     private func makeConstraints() {
         NSLayoutConstraint.activate([
@@ -222,54 +212,47 @@ class AuthorizationViewController: UIViewController {
         ])
     }
     
-    // MARK: - Actions
+    // MARK: Actions
     
     @objc private func anilibriaLoginButtonDidPress() {
         showLoading()
-        anilibriaWasCalled = true
-        router.routeToWebView(by: Constants.anilibriaUrl, from: self)
+        presenter.anilibriaLoginButtonDidPress(urlString: Constants.anilibriaUrl, from: self)
     }
     
     @objc private func shikimoriLoginButtonDidPress() {
         showLoading()
-        shikimoriWasCalled = true
-        router.routeToWebView(by: Constants.shikimoriUrl, from: self)
+        presenter.shikimoriLoginButtonDidPress(urlString: Constants.shikimoriUrl, from: self)
     }
     
     @objc private func startButtonDidPress() {
-        if (startButton.isActive) {
-            router.routeToTabbar()
-        }
+        presenter.startButtonDidPress(isActive: startButton.isActive)
     }
 }
 
-extension AuthorizationViewController: AuthorizationViewDisplayLogic, AuthDelegate {
-    func result(isSuccess: Bool) {
-        hideLoading()
-        if (isSuccess) {
-            if (anilibriaWasCalled) {
-                loggedInToAnilibria = true
-                checkmarkAnilibriaCircleView.image = UIImage(named: Constants.checkmarkStateOnName)
-            }
-            if (shikimoriWasCalled) {
-                loggedInToShikimori = true
-                checkmarkShikimoriCircleView.image = UIImage(named: Constants.checkmarkStateOnName)
-            }
-        }
-        anilibriaWasCalled = false
-        shikimoriWasCalled = false
-        if (loggedInToAnilibria && loggedInToShikimori) {
-            startButton.setActive()
-        }
-    }
-    
-    func displaySuccess() {
-        // TODO: Display logic
-    }
+// MARK: - AuthViewDisplayLogic, AuthDelegate
+
+extension AuthViewController: AuthViewDisplayLogic, AuthDelegate {
     
     func displayErrorAlert(with message: String) {
         let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(errorAlert, animated: true)
+    }
+    
+    func displayCheckmarkAnilibriaCircleView() {
+        checkmarkAnilibriaCircleView.image = UIImage(named: Constants.checkmarkStateOnName)
+    }
+    
+    func displayCheckmarkShikimoriCircleView() {
+        checkmarkShikimoriCircleView.image = UIImage(named: Constants.checkmarkStateOnName)
+    }
+    
+    func displayStartButtonActiveState() {
+        startButton.setActive()
+    }
+    
+    func result(isSuccess: Bool) {
+        hideLoading()
+        presenter.processResult(isSuccess: isSuccess)
     }
 }

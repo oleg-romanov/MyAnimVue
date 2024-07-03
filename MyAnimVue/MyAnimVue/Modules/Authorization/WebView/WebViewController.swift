@@ -10,7 +10,7 @@ import WebKit
 
 class WebViewController: UIViewController {
     
-    // MARK: - Constants
+    // MARK: Constants
     
     private enum Constants {
         static let alertTitleText = "Ошибка"
@@ -19,10 +19,9 @@ class WebViewController: UIViewController {
         static let rightBarButtonTitle = "Закрыть"
     }
     
-    // MARK: - Instance Properties
+    // MARK: Instance Properties
     
-    private var interactor: WebViewBusinessLogic!
-    private var router: WebViewRoutingLogic!
+    var presenter: WebViewPresentationLogic!
     
     private var urlString: String
     
@@ -44,7 +43,7 @@ class WebViewController: UIViewController {
         return progressView
     }()
     
-    // MARK:  Initializers
+    // MARK: Initializers
     
     init(with urlString: String) {
         self.urlString = urlString
@@ -72,14 +71,6 @@ class WebViewController: UIViewController {
     
     // MARK: Setup
     
-    func setupComponents(
-        interactor: WebViewBusinessLogic,
-        router: WebViewRoutingLogic
-    ) {
-        self.interactor = interactor
-        self.router = router
-    }
-    
     private func setup() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: Constants.rightBarButtonTitle,
@@ -93,7 +84,7 @@ class WebViewController: UIViewController {
         guard let url = URL(string: urlString) else {
             // TODO: Обработать ошибку
             delegate?.result(isSuccess: false)
-            router.dismissController()
+            presenter.dismissController()
             return
         }
         let urlRequest = URLRequest(url: url)
@@ -106,7 +97,8 @@ class WebViewController: UIViewController {
         )
         observation = webView.observe(
             \.estimatedProgress,
-             options: [.new]) { _, _ in
+             options: [.new]) { [weak self] _, _ in
+                 guard let self = self else { return }
                  self.progressView.progress = Float(self.webView.estimatedProgress)
                  if (self.webView.estimatedProgress == 1.0) {
                     self.progressView.isHidden = true
@@ -120,6 +112,8 @@ class WebViewController: UIViewController {
         view.addSubview(progressView)
     }
     
+    // MARK: Constraints
+    
     private func makeConstraints() {
         NSLayoutConstraint.activate([
             webView.leadingAnchor.constraint(equalTo: super.view.leadingAnchor),
@@ -132,12 +126,11 @@ class WebViewController: UIViewController {
         ])
     }
     
-    // MARK:  Actions
+    // MARK: Actions
     
     @objc private func closeButtonDidPress() {
-        router.dismissController {
-            self.delegate?.result(isSuccess: false)
-        }
+        delegate?.result(isSuccess: false)
+        presenter.dismissController()
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -150,7 +143,7 @@ class WebViewController: UIViewController {
                     for cookie in cookies {
                         if (cookie.name == "PHPSESSID") {
                             self.sessionIdIsFound = true
-                            interactor.saveSessionIdForAnilibria(with: cookie.value)
+                            presenter.saveSessionIdForAnilibria(with: cookie.value)
                         }
                     }
                 }
@@ -161,23 +154,23 @@ class WebViewController: UIViewController {
     private func checkDocumentOnAuthCode() {
         webView.evaluateJavaScript("document.getElementById('authorization_code').innerText;") { result, error in
             if let result = result {
-                self.interactor.saveTokensForShikimori(with: "\(result)")
+                self.presenter.saveTokenForShikimori(with: "\(result)")
             }
         }
     }
 }
 
-// MARK:  UIAdaptivePresentationControllerDelegate
+// MARK: - UIAdaptivePresentationControllerDelegate
 
 extension WebViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
         if (!sessionIdIsFound) {
-            self.delegate?.result(isSuccess: false)
+            delegate?.result(isSuccess: false)
         }
     }
 }
 
-// MARK:  WKNavigationDelegate
+// MARK: - WKNavigationDelegate
 
 extension WebViewController: WKNavigationDelegate {
     
@@ -186,29 +179,28 @@ extension WebViewController: WKNavigationDelegate {
     }
 }
 
-// MARK:  WebViewDisplayLogic
+// MARK: - WebViewDisplayLogic
 
 extension WebViewController: WebViewDisplayLogic {
     
     func displaySuccess() {
         delegate?.result(isSuccess: true)
-        router.dismissController()
+        presenter.dismissController()
     }
     
-    func displayErrorAlert() {
+    func displayErrorAlert(with message: String) {
         let alertController = UIAlertController(
             title: Constants.alertTitleText,
-            message: Constants.alertMessageText,
+            message: message,
             preferredStyle: .alert
         )
         let action = UIAlertAction(
             title: Constants.alertActionTitle,
             style: .default) { action in
-                self.router.dismissController {
-                    self.delegate?.result(isSuccess: false)
-                }
+                self.delegate?.result(isSuccess: false)
+                self.presenter.dismissController()
         }
         alertController.addAction(action)
-        router.presentController(viewController: alertController)
+        presenter.presentController(controller: alertController)
     }
 }
