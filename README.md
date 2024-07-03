@@ -33,7 +33,7 @@
     - Make sure that the "Copy items if needed" checkbox is selected
     - And marked "Create groups"
 
-    
+
 - Or instead of executing a script, create a `Config.plist` file in the project directory in Xcode yourself:
     - Create a file `Config.plist` 
     - Add the `CLIENT_ID` and `CLIENT_SECRET` keys and values for them.
