@@ -9,6 +9,8 @@ import Foundation
 
 public actor APIClient {
     
+    // MARK: Instance Properties
+    
     public nonisolated let configuration: Configuration
     
     public nonisolated let session: URLSession
@@ -36,6 +38,8 @@ public actor APIClient {
         }
     }
     
+    // MARK: Initializers
+    
     public init(baseURL: URL?, _ configure: @Sendable (inout APIClient.Configuration) -> Void) {
         var configuration = Configuration(baseURL: baseURL)
         configure(&configuration)
@@ -48,6 +52,8 @@ public actor APIClient {
         self.decoder = configuration.decoder
         self.encoder = configuration.encoder
     }
+    
+    // MARK: Instance Methods
     
     @discardableResult public func send<T: Decodable>(
         _ request: Request<T>,

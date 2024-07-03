@@ -7,17 +7,13 @@
 
 import UIKit
 
-final class AuthorizationRouter: AuthorizationRoutingLogic {
+final class AuthRouter: AuthRoutingLogic {
     
-    // MARK: - Instance Properties
+    // MARK: Instance Properties
 
-    private weak var viewController: UIViewController!
-
-    // MARK: - Initializers
-
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+    weak var viewController: UIViewController!
+    
+    // MARK: Instance Methods
     
     func routeToTabbar() {
         // TODO: Заменить стандартный Tabbar
@@ -30,8 +26,9 @@ final class AuthorizationRouter: AuthorizationRoutingLogic {
         }
     }
     
-    func routeToWebView(by urlString: String, from: AuthorizationViewController) {
-        let webViewController = WebViewControllerConfigurator().setupModule(with: urlString)
+    func routeToWebView(by urlString: String, from: NSObject) {
+        guard let from = from as? AuthViewController else { return }
+        let webViewController = WebViewAssembly.setupModule(with: urlString)
         webViewController.delegate = from
         let navController = UINavigationController(rootViewController: webViewController)
         viewController.present(navController, animated: true, completion: nil)

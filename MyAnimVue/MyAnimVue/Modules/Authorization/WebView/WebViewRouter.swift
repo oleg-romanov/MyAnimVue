@@ -9,27 +9,18 @@ import UIKit
 
 final class WebViewRouter: WebViewRoutingLogic {
     
-    // MARK: - Instance Properties
+    // MARK: Instance Properties
 
-    private weak var viewController: UIViewController!
-
-    // MARK: - Initializers
-
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+    weak var viewController: UIViewController!
     
-    func dismissController(with completion: @escaping () -> Void) {
-        viewController.dismiss(animated: true) {
-            completion()
-        }
-    }
+    // MARK: Instance Methods
     
     func dismissController() {
         viewController.dismiss(animated: true)
     }
     
-    func presentController(viewController: UIViewController) {
-        viewController.present(viewController, animated: true)
+    func presentController(controller: NSObject) {
+        guard let controller = controller as? UIViewController else { return }
+        viewController.present(controller, animated: true)
     }
 }

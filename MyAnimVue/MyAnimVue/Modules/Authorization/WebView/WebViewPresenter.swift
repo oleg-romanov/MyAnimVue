@@ -9,21 +9,35 @@ import Foundation
 
 final class WebViewPresenter: WebViewPresentationLogic {
     
-    // MARK: - Instance Properties
+    // MARK: Instance Properties
     
-    private weak var viewController: WebViewDisplayLogic!
+    weak var view: WebViewDisplayLogic!
+    var interactor: WebViewBusinessLogic!
+    var router: WebViewRoutingLogic!
     
-    // MARK: - Initializers
-    
-    init(viewController: WebViewDisplayLogic) {
-        self.viewController = viewController
-    }
+    // MARK: Instance Methods
     
     func presentSuccess() {
-        viewController.displaySuccess()
+        view.displaySuccess()
     }
     
-    func presentError() {
-        viewController.displayErrorAlert()
+    func presentError(with message: String) {
+        view.displayErrorAlert(with: message)
+    }
+    
+    func saveSessionIdForAnilibria(with value: String) {
+        interactor.saveSessionIdForAnilibria(with: value)
+    }
+    
+    func saveTokenForShikimori(with value: String) {
+        interactor.saveTokenForShikimori(with: value)
+    }
+    
+    func dismissController() {
+        router.dismissController()
+    }
+    
+    func presentController(controller: NSObject) {
+        router.presentController(controller: controller)
     }
 }
