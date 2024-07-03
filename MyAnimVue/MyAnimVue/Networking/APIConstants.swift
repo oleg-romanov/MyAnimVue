@@ -10,7 +10,7 @@ enum APIConstants {
     static let host = "https://api.anilibria.tv/v3/"
     static let responseType = "token"
     
-    func obtainClientId() -> String {
+    static func obtainClientId() -> String {
         var myDict: [String:String]?
         let url = obtainUrlPathToConfigPlist()
         
@@ -23,7 +23,7 @@ enum APIConstants {
         }
     }
     
-    func obtainClientSecret() -> String {
+    static func obtainClientSecret() -> String {
         var myDict: [String:String]?
         let url = obtainUrlPathToConfigPlist()
         
@@ -36,13 +36,12 @@ enum APIConstants {
         }
     }
     
-    private func obtainUrlPathToConfigPlist() -> URL {
-        guard
-            let pathString = Bundle.main.path(forResource: "Config", ofType: "plist"),
-            let pathUrl = URL(string: pathString)
+    private static func obtainUrlPathToConfigPlist() -> URL {
+        guard let url = Bundle.main.url(forResource: "Config", withExtension: "plist") 
         else {
             fatalError("Couldn't find Config.plist in app bundle.")
         }
-        return pathUrl
+        
+        return url
     }
 }
