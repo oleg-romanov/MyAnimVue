@@ -26,12 +26,12 @@
     ```
 
     After executing the script: 
-    - Open the Xcode project
-    - In the file tree, click "Add files to "MyAnimVue"..."
-    - Select "Add files to "MyAnimVue"".
-    - Select Config.plist : "{Project location}/MyAnimVue/MyAnimVue/App/Config.plist"
-    - Make sure that the "Copy items if needed" checkbox is selected
-    - And marked "Create groups"
+    - Open the **Xcode project**
+    - In the file tree, click **"Add files to "MyAnimVue"..."**
+    - Select **"Add files to "MyAnimVue""**.
+    - Select **Config.plist** : *"{Project location}/MyAnimVue/MyAnimVue/App/Config.plist"*
+    - Make sure that the **"Copy items if needed"** checkbox **is selected**
+    - And marked **"Create groups"**
 
 
 - Or instead of executing a script, create a `Config.plist` file in the project directory in Xcode yourself:
