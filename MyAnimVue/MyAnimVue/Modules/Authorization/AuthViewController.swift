@@ -12,7 +12,7 @@ protocol AuthDelegate: AnyObject {
     func result(isSuccess: Bool)
 }
 
-class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController {
     
     // MARK: Constants
     
@@ -39,7 +39,7 @@ class AuthViewController: UIViewController {
     private struct Appearance: Grid {
         let applicationLogoWidth: CGFloat = 150
         let applicationLogoTopAnchor: CGFloat = 90
-        let titleLableTopAnchor: CGFloat = 60
+        let titleLabelTopAnchor: CGFloat = 60
         let startButtonHeight: CGFloat = 60
     }
     
@@ -56,7 +56,7 @@ class AuthViewController: UIViewController {
         return imageView
     }()
     
-    private lazy var titleLable: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldTitle
         label.textColor = UIColor(named: Constants.mainTextColor)
@@ -154,7 +154,7 @@ class AuthViewController: UIViewController {
     
     private func addSubviews() {
         view.addSubview(applicationLogoView)
-        view.addSubview(titleLable)
+        view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
         view.addSubview(anilibriaLabel)
         view.addSubview(shikimoriLabel)
@@ -174,12 +174,12 @@ class AuthViewController: UIViewController {
             applicationLogoView.heightAnchor.constraint(equalTo: applicationLogoView.widthAnchor),
             applicationLogoView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
-            titleLable.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: appearance.sSpace),
-            titleLable.topAnchor.constraint(equalTo: applicationLogoView.bottomAnchor, constant: appearance.titleLableTopAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: appearance.sSpace),
+            titleLabel.topAnchor.constraint(equalTo: applicationLogoView.bottomAnchor, constant: appearance.titleLabelTopAnchor),
             
             descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: appearance.sSpace),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -appearance.sSpace),
-            descriptionLabel.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: appearance.lSpace),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: appearance.lSpace),
             
             checkmarkAnilibriaCircleView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: appearance.sSpace),
             checkmarkAnilibriaCircleView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: appearance.lSpace),
