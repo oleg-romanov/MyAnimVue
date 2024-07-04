@@ -7,18 +7,18 @@
 
 import UIKit
 
-class StartButton: UIButton {
+final class StartButton: UIButton {
     
-    // MARK: - Constants
+    // MARK: Constants
     
     private enum Constants {
-        static let textColor = "DarkTextColor"
+        static let textColor = "InvertedMainTextColor"
         static let inactiveBackgroundColor = "StartButtonColor"
         static let activeBackgroundColor = "AccentColor"
         static let cornerRadius: CGFloat = 14
     }
     
-    // MARK:  Instance Properties
+    // MARK: Instance Properties
     
     private(set) var isActive: Bool = false {
         didSet {
@@ -30,7 +30,7 @@ class StartButton: UIButton {
         }
     }
     
-    // MARK:  Initialize
+    // MARK: Initializers
     
     init(title: String) {
         super.init(frame: .zero)
@@ -41,6 +41,8 @@ class StartButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Setup
+    
     private func setupStyle(title: String) {
         setTitle(title, for: .normal)
         titleLabel?.font = UIFont.semiboldTitle
@@ -48,6 +50,8 @@ class StartButton: UIButton {
         backgroundColor = UIColor(named: Constants.inactiveBackgroundColor)
         layer.cornerRadius = Constants.cornerRadius
     }
+    
+    // MARK: Instance Methods
     
     func setActive() {
         isActive = true

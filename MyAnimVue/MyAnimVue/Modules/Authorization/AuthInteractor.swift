@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthInteractor: AuthBusinessLogic {
+final class AuthInteractor: AuthBusinessLogic {
     
     // MARK: Instance Properties
     

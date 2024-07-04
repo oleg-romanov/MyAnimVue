@@ -24,6 +24,16 @@
 		EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */; };
 		EA2101552B7CACC900C3D767 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2101542B7CACC900C3D767 /* Request.swift */; };
 		EA2101572B7CAD3B00C3D767 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2101562B7CAD3B00C3D767 /* APIClient.swift */; };
+		EA3BCF202C368969004DB43B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF1F2C368969004DB43B /* OnboardingViewController.swift */; };
+		EA3BCF222C36A043004DB43B /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF212C36A043004DB43B /* NextButton.swift */; };
+		EA3BCF252C36BF34004DB43B /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF242C36BF34004DB43B /* SlideCell.swift */; };
+		EA3BCF272C36C33B004DB43B /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF262C36C33B004DB43B /* Slide.swift */; };
+		EA3BCF292C371D70004DB43B /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF282C371D70004DB43B /* UIWindow+Extensions.swift */; };
+		EA3BCF2B2C372027004DB43B /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF2A2C372027004DB43B /* OnboardingRouter.swift */; };
+		EA3BCF2D2C372033004DB43B /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF2C2C372033004DB43B /* OnboardingProtocols.swift */; };
+		EA3BCF2F2C37203E004DB43B /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */; };
+		EA3BCF312C37204A004DB43B /* OnboardingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */; };
+		EA3BCF332C372579004DB43B /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */; };
 		EA3D310A2B48335000D637A8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3D31092B48334F00D637A8 /* Config.plist */; };
 		EA59E0192B0D2D0200A49694 /* WebViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E0182B0D2D0200A49694 /* WebViewAssembly.swift */; };
 		EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */; };
@@ -84,6 +94,16 @@
 		EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		EA2101542B7CACC900C3D767 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		EA2101562B7CAD3B00C3D767 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		EA3BCF1F2C368969004DB43B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		EA3BCF212C36A043004DB43B /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		EA3BCF242C36BF34004DB43B /* SlideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCell.swift; sourceTree = "<group>"; };
+		EA3BCF262C36C33B004DB43B /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		EA3BCF282C371D70004DB43B /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		EA3BCF2A2C372027004DB43B /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		EA3BCF2C2C372033004DB43B /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
+		EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssembly.swift; sourceTree = "<group>"; };
+		EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		EA3D31092B48334F00D637A8 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		EA59E0182B0D2D0200A49694 /* WebViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAssembly.swift; sourceTree = "<group>"; };
 		EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
@@ -187,6 +207,7 @@
 		EA195DF22AD9A32100C8A309 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA3BCF1E2C3688C6004DB43B /* Onboarding */,
 				EA195DF32AD9A32E00C8A309 /* Authorization */,
 			);
 			path = Modules;
@@ -245,13 +266,37 @@
 			children = (
 				EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */,
 				EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */,
+				EA3BCF282C371D70004DB43B /* UIWindow+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EA3BCF1E2C3688C6004DB43B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EA3BCF232C36BF26004DB43B /* Cell */,
+				EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */,
+				EA3BCF2C2C372033004DB43B /* OnboardingProtocols.swift */,
+				EA3BCF1F2C368969004DB43B /* OnboardingViewController.swift */,
+				EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */,
+				EA3BCF2A2C372027004DB43B /* OnboardingRouter.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		EA3BCF232C36BF26004DB43B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA3BCF242C36BF34004DB43B /* SlideCell.swift */,
+				EA3BCF262C36C33B004DB43B /* Slide.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EA9E4BD52AEC37E200D00A7B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */,
 				EA59E01E2B0E08F600A49694 /* Nunito-ExtraBold.ttf */,
 				EA9E4BE52AECF24200D00A7B /* Nunito-SemiBold.ttf */,
 				EA9E4BE02AEC3B8700D00A7B /* Nunito-Medium.ttf */,
@@ -265,6 +310,7 @@
 			children = (
 				EA9E4BE32AECEB4300D00A7B /* StartButton.swift */,
 				EA59E01C2B0DE70C00A49694 /* LoadingView.swift */,
+				EA3BCF212C36A043004DB43B /* NextButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -402,6 +448,7 @@
 			files = (
 				EA9E4BDF2AEC39E600D00A7B /* Nunito-Bold.ttf in Resources */,
 				EA9E4BE12AEC3B8700D00A7B /* Nunito-Medium.ttf in Resources */,
+				EA3BCF332C372579004DB43B /* Nunito-Regular.ttf in Resources */,
 				EA195DCF2AD99FCE00C8A309 /* LaunchScreen.storyboard in Resources */,
 				EA59E01F2B0E08F600A49694 /* Nunito-ExtraBold.ttf in Resources */,
 				EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */,
@@ -432,7 +479,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */,
+				EA3BCF292C371D70004DB43B /* UIWindow+Extensions.swift in Sources */,
 				EA9E4BE92AECF57C00D00A7B /* Grid.swift in Sources */,
+				EA3BCF2D2C372033004DB43B /* OnboardingProtocols.swift in Sources */,
 				EA5B15622AF170D300E56A26 /* WebViewInteractor.swift in Sources */,
 				EA9E4BEF2AEE50B700D00A7B /* WebViewController.swift in Sources */,
 				EA2101552B7CACC900C3D767 /* Request.swift in Sources */,
@@ -440,6 +489,7 @@
 				EA2101572B7CAD3B00C3D767 /* APIClient.swift in Sources */,
 				EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */,
 				EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */,
+				EA3BCF272C36C33B004DB43B /* Slide.swift in Sources */,
 				EA59E0192B0D2D0200A49694 /* WebViewAssembly.swift in Sources */,
 				EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */,
 				EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */,
@@ -447,15 +497,21 @@
 				EA195E142ADC033400C8A309 /* Keychain.swift in Sources */,
 				EA195E192ADC044400C8A309 /* Keys.swift in Sources */,
 				EA9E4BEB2AEE371B00D00A7B /* AuthRouter.swift in Sources */,
+				EA3BCF202C368969004DB43B /* OnboardingViewController.swift in Sources */,
 				EADB29852BA07B5B00135D2C /* Response.swift in Sources */,
+				EA3BCF312C37204A004DB43B /* OnboardingAssembly.swift in Sources */,
 				EA59E01D2B0DE70C00A49694 /* LoadingView.swift in Sources */,
+				EA3BCF2B2C372027004DB43B /* OnboardingRouter.swift in Sources */,
 				EA5D999B2C35890000436745 /* AuthInteractor.swift in Sources */,
 				EA195E1D2ADC266800C8A309 /* AuthAssembly.swift in Sources */,
+				EA3BCF252C36BF34004DB43B /* SlideCell.swift in Sources */,
 				EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */,
+				EA3BCF2F2C37203E004DB43B /* OnboardingPresenter.swift in Sources */,
 				EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */,
 				EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */,
 				EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */,
 				EAD271482C348E1800316423 /* APIError.swift in Sources */,
+				EA3BCF222C36A043004DB43B /* NextButton.swift in Sources */,
 				EA9E4BE42AECEB4300D00A7B /* StartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

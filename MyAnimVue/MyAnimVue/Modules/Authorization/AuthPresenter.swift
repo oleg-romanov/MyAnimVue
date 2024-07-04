@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthPresenter: AuthPresentationLogic {
+final class AuthPresenter: AuthPresentationLogic {
     
     // MARK: Instance Properties
     
