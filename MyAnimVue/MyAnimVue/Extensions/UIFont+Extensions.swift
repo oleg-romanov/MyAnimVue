@@ -16,4 +16,6 @@ extension UIFont {
     static let semiboldTitle = UIFont(name: "Nunito-SemiBold", size: 20)
     /// Средний, размер 20
     static let mediumText = UIFont(name: "Nunito-Medium", size: 20)
+    /// Regular, размер 20
+    static let regularText = UIFont(name: "Nunito-Regular", size: 22)
 }

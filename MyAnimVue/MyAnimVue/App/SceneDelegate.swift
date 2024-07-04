@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = AuthAssembly.setupModule()
+        #warning("Добавить Userdefaults для проверки первый вход или нет")
+        window?.rootViewController = OnboardingAssembly.setupModule()
         window?.makeKeyAndVisible()
     }
 
