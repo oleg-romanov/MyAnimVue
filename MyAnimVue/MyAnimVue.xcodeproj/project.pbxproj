@@ -34,6 +34,13 @@
 		EA3BCF2F2C37203E004DB43B /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */; };
 		EA3BCF312C37204A004DB43B /* OnboardingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */; };
 		EA3BCF332C372579004DB43B /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */; };
+		EA3BCF352C37D7EA004DB43B /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF342C37D7EA004DB43B /* Tabbar.swift */; };
+		EA3BCF382C37DE17004DB43B /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF372C37DE17004DB43B /* ProfileAssembly.swift */; };
+		EA3BCF3A2C37DE32004DB43B /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF392C37DE32004DB43B /* ProfileProtocols.swift */; };
+		EA3BCF3C2C37DED1004DB43B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF3B2C37DED1004DB43B /* ProfileViewController.swift */; };
+		EA3BCF3E2C37DEF1004DB43B /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF3D2C37DEF1004DB43B /* ProfilePresenter.swift */; };
+		EA3BCF402C37DEFD004DB43B /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF3F2C37DEFD004DB43B /* ProfileInteractor.swift */; };
+		EA3BCF422C37DF09004DB43B /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF412C37DF09004DB43B /* ProfileRouter.swift */; };
 		EA3D310A2B48335000D637A8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3D31092B48334F00D637A8 /* Config.plist */; };
 		EA59E0192B0D2D0200A49694 /* WebViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E0182B0D2D0200A49694 /* WebViewAssembly.swift */; };
 		EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */; };
@@ -104,6 +111,13 @@
 		EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssembly.swift; sourceTree = "<group>"; };
 		EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		EA3BCF342C37D7EA004DB43B /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		EA3BCF372C37DE17004DB43B /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		EA3BCF392C37DE32004DB43B /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		EA3BCF3B2C37DED1004DB43B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EA3BCF3D2C37DEF1004DB43B /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		EA3BCF3F2C37DEFD004DB43B /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		EA3BCF412C37DF09004DB43B /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		EA3D31092B48334F00D637A8 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		EA59E0182B0D2D0200A49694 /* WebViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAssembly.swift; sourceTree = "<group>"; };
 		EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
@@ -207,6 +221,7 @@
 		EA195DF22AD9A32100C8A309 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA3BCF362C37DE02004DB43B /* Profile */,
 				EA3BCF1E2C3688C6004DB43B /* Onboarding */,
 				EA195DF32AD9A32E00C8A309 /* Authorization */,
 			);
@@ -293,6 +308,19 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EA3BCF362C37DE02004DB43B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EA3BCF372C37DE17004DB43B /* ProfileAssembly.swift */,
+				EA3BCF392C37DE32004DB43B /* ProfileProtocols.swift */,
+				EA3BCF3B2C37DED1004DB43B /* ProfileViewController.swift */,
+				EA3BCF3F2C37DEFD004DB43B /* ProfileInteractor.swift */,
+				EA3BCF3D2C37DEF1004DB43B /* ProfilePresenter.swift */,
+				EA3BCF412C37DF09004DB43B /* ProfileRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		EA9E4BD52AEC37E200D00A7B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9E4BE82AECF57C00D00A7B /* Grid.swift */,
+				EA3BCF342C37D7EA004DB43B /* Tabbar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -481,11 +510,15 @@
 				EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */,
 				EA3BCF292C371D70004DB43B /* UIWindow+Extensions.swift in Sources */,
 				EA9E4BE92AECF57C00D00A7B /* Grid.swift in Sources */,
+				EA3BCF352C37D7EA004DB43B /* Tabbar.swift in Sources */,
 				EA3BCF2D2C372033004DB43B /* OnboardingProtocols.swift in Sources */,
 				EA5B15622AF170D300E56A26 /* WebViewInteractor.swift in Sources */,
+				EA3BCF422C37DF09004DB43B /* ProfileRouter.swift in Sources */,
 				EA9E4BEF2AEE50B700D00A7B /* WebViewController.swift in Sources */,
+				EA3BCF3A2C37DE32004DB43B /* ProfileProtocols.swift in Sources */,
 				EA2101552B7CACC900C3D767 /* Request.swift in Sources */,
 				EA5D99992C35860900436745 /* AuthPresenter.swift in Sources */,
+				EA3BCF402C37DEFD004DB43B /* ProfileInteractor.swift in Sources */,
 				EA2101572B7CAD3B00C3D767 /* APIClient.swift in Sources */,
 				EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */,
 				EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */,
@@ -494,6 +527,7 @@
 				EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */,
 				EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */,
 				EA195E082AD9B1B400C8A309 /* APIConstants.swift in Sources */,
+				EA3BCF3E2C37DEF1004DB43B /* ProfilePresenter.swift in Sources */,
 				EA195E142ADC033400C8A309 /* Keychain.swift in Sources */,
 				EA195E192ADC044400C8A309 /* Keys.swift in Sources */,
 				EA9E4BEB2AEE371B00D00A7B /* AuthRouter.swift in Sources */,
@@ -512,7 +546,9 @@
 				EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */,
 				EAD271482C348E1800316423 /* APIError.swift in Sources */,
 				EA3BCF222C36A043004DB43B /* NextButton.swift in Sources */,
+				EA3BCF3C2C37DED1004DB43B /* ProfileViewController.swift in Sources */,
 				EA9E4BE42AECEB4300D00A7B /* StartButton.swift in Sources */,
+				EA3BCF382C37DE17004DB43B /* ProfileAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

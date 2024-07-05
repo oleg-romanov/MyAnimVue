@@ -17,7 +17,7 @@ final class AuthRouter: AuthRoutingLogic {
     
     func routeToTabbar() {
         // TODO: Заменить стандартный Tabbar
-        let tabbar = UITabBarController()
+        let tabbar = Tabbar()
         guard let window = viewController.window else {
             return
         }
