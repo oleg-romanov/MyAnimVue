@@ -30,47 +30,25 @@ final class ProfileViewController: UIViewController {
         let titleLabelTopAnchor: CGFloat = 60
     }
     
-    private enum SegmentedControlIndex: Int {
-        case shikimori = 0
-        case anilibria = 1
-    }
-    
     // MARK: Instance Properties
     
     var presenter: ProfilePresentationLogic!
     
     private let appearance = Appearance()
     
-    private lazy var applicationLogoView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: Constants.logoImageName)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    private lazy var headerView: ProfileHeaderView = {
+        let view = ProfileHeaderView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = Constants.titleText
-        label.font = UIFont.boldTitle
-        label.tintColor = UIColor(named: Constants.mainTextColor)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private lazy var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: [Constants.leftSegmentControlItemName, Constants.rightSegmentControlItemName]
-        )
-        segmentedControl.backgroundColor = UIColor(named: Constants.clearColor)
-        segmentedControl.selectedSegmentTintColor = UIColor(named: Constants.primaryColor)
-        segmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor(named: Constants.mainTextColor)!,
-            NSAttributedString.Key.font: UIFont.boldMediumText!], for: .normal)
-        segmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.foregroundColor: UIColor(named: Constants.invertedTextColor)!,
-            NSAttributedString.Key.font: UIFont.boldMediumText!], for: .selected)
-        segmentedControl.selectedSegmentIndex = SegmentedControlIndex.shikimori.rawValue
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        return segmentedControl
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.backgroundColor = .clear
+        tableView.tableHeaderView = headerView
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
     }()
     
     // MARK: Lifecycle
@@ -89,47 +67,42 @@ final class ProfileViewController: UIViewController {
     }
     
     private func addSubviews() {
-        view.addSubview(applicationLogoView)
-        view.addSubview(titleLabel)
-        view.addSubview(segmentedControl)
+        view.addSubview(tableView)
     }
     
     // MARK: Constraints
     
     private func makeConstraints() {
         NSLayoutConstraint.activate([
-            applicationLogoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: appearance.xxlSpace - 2),
-            applicationLogoView.widthAnchor.constraint(equalToConstant: appearance.applicationLogoWidth),
-            applicationLogoView.heightAnchor.constraint(equalTo: applicationLogoView.widthAnchor),
-            applicationLogoView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            tableView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor
+            ),
+            tableView.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor
+            ),
+            tableView.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor
+            ),
+            tableView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor
+            ),
             
-            titleLabel.topAnchor.constraint(
-                equalTo: applicationLogoView.bottomAnchor,
-                constant: appearance.titleLabelTopAnchor
-            ),
-            titleLabel.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor,
-                constant: appearance.sSpace
-            ),
-            
-            segmentedControl.topAnchor.constraint(
-                equalTo: titleLabel.bottomAnchor,
-                constant: appearance.mSpace + 4
-            ),
-            segmentedControl.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor,
-                constant: appearance.sSpace
-            ),
-            segmentedControl.trailingAnchor.constraint(
-                equalTo: view.trailingAnchor,
-                constant: -appearance.sSpace
-            ),
-            segmentedControl.heightAnchor.constraint(
-                equalToConstant: appearance.lSpace
+            headerView.widthAnchor.constraint(
+                equalTo: tableView.widthAnchor
             ),
         ])
     }
 }
 
 extension ProfileViewController: ProfileDisplayLogic {
+}
+
+extension ProfileViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
 }
