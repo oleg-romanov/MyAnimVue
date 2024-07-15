@@ -26,7 +26,7 @@ final class ProfileHeaderView: UIView {
     
     private struct Appearance: Grid {
         let applicationLogoWidth: CGFloat = 150
-        let titleLabelTopAnchor: CGFloat = 60
+        let titleLabelTopAnchor: CGFloat = 59
         let separatorViewHeight: CGFloat = 2
     }
     
@@ -57,10 +57,10 @@ final class ProfileHeaderView: UIView {
         segmentedControl.selectedSegmentTintColor = UIColor(named: Constants.primaryColor)
         segmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor(named: Constants.mainTextColor)!,
-            NSAttributedString.Key.font: UIFont.boldMediumText!], for: .normal)
+            NSAttributedString.Key.font: UIFont.boldText!], for: .normal)
         segmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor(named: Constants.invertedTextColor)!,
-            NSAttributedString.Key.font: UIFont.boldMediumText!], for: .selected)
+            NSAttributedString.Key.font: UIFont.boldText!], for: .selected)
         segmentedControl.selectedSegmentIndex = SegmentedControlIndex.shikimori.rawValue
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         return segmentedControl
@@ -86,6 +86,11 @@ final class ProfileHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        segmentedControl.frame.size.height = appearance.lSpace
+    }
+    
     // MARK: Setup
     
     private func setup() {
@@ -105,13 +110,13 @@ final class ProfileHeaderView: UIView {
         NSLayoutConstraint.activate([
             applicationLogoView.topAnchor.constraint(
                 equalTo: topAnchor,
-                constant: appearance.xxlSpace - 2
+                constant: appearance.xxlSpace + appearance.xxsSpace
             ),
             applicationLogoView.widthAnchor.constraint(
                 equalToConstant: appearance.applicationLogoWidth
             ),
             applicationLogoView.heightAnchor.constraint(
-                equalTo: applicationLogoView.widthAnchor
+                equalToConstant: appearance.applicationLogoWidth
             ),
             applicationLogoView.centerXAnchor.constraint(
                 equalTo: centerXAnchor
@@ -125,10 +130,13 @@ final class ProfileHeaderView: UIView {
                 equalTo: leadingAnchor,
                 constant: appearance.sSpace
             ),
+            titleLabel.heightAnchor.constraint(
+                equalToConstant: appearance.lSpace + 2
+            ),
             
             segmentedControl.topAnchor.constraint(
                 equalTo: titleLabel.bottomAnchor,
-                constant: appearance.mSpace + 4
+                constant: appearance.sSpace
             ),
             segmentedControl.leadingAnchor.constraint(
                 equalTo: leadingAnchor,
@@ -137,9 +145,6 @@ final class ProfileHeaderView: UIView {
             segmentedControl.trailingAnchor.constraint(
                 equalTo: trailingAnchor,
                 constant: -appearance.sSpace
-            ),
-            segmentedControl.heightAnchor.constraint(
-                equalToConstant: appearance.lSpace
             ),
             
             separatorView.topAnchor.constraint(
