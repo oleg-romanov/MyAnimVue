@@ -1,7 +1,7 @@
 # MyAnimVue
 
 ## Tech Stack
-- Swift 5
+- Swift 5; iOS 14
 - UIKit
 - VIPER
 - Keychain
