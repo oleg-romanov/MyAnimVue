@@ -29,8 +29,11 @@ final class WebViewController: UIViewController {
     
     private var observation: NSKeyValueObservation? = nil
     
-    private let webView: WKWebView = {
-        let webView = WKWebView()
+    private lazy var webView: WKWebView = {
+        let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.preferences.javaScriptEnabled = true
+        webConfiguration.websiteDataStore = WKWebsiteDataStore.default()
+        let webView = WKWebView(frame: view.bounds, configuration: webConfiguration)
         webView.translatesAutoresizingMaskIntoConstraints = false
         return webView
     }()
@@ -60,9 +63,17 @@ final class WebViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.presentationController?.delegate = self
         webView.navigationDelegate = self
+        
         addSubviews()
         makeConstraints()
         setup()
+        #warning("Временно для отладки чистятся все куки при каждом запуске")
+        HTTPCookieStorage.shared.removeCookies(since: .distantPast)
+        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
+            records.forEach { record in
+                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
+            }
+        }
     }
     
     deinit {
@@ -116,10 +127,10 @@ final class WebViewController: UIViewController {
     
     private func makeConstraints() {
         NSLayoutConstraint.activate([
-            webView.leadingAnchor.constraint(equalTo: super.view.leadingAnchor),
-            webView.topAnchor.constraint(equalTo: super.view.topAnchor),
-            webView.trailingAnchor.constraint(equalTo: super.view.trailingAnchor),
-            webView.bottomAnchor.constraint(equalTo: super.view.bottomAnchor),
+            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            webView.topAnchor.constraint(equalTo: view.topAnchor),
+            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             progressView.widthAnchor.constraint(equalTo: webView.widthAnchor),
             progressView.topAnchor.constraint(equalTo: webView.safeAreaLayoutGuide.topAnchor)
@@ -134,7 +145,7 @@ final class WebViewController: UIViewController {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let key = change?[NSKeyValueChangeKey.newKey] {
+        if (change?[NSKeyValueChangeKey.newKey]) != nil {
             webView.configuration.websiteDataStore.httpCookieStore.getAllCookies { [weak self] cookies in
                 guard let self = self else {
                     return

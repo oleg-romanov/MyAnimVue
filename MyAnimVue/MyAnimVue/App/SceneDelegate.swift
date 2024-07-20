@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         #warning("Добавить Userdefaults для проверки первый вход или нет")
-        window?.rootViewController = OnboardingAssembly.setupModule()
+//        window?.rootViewController = OnboardingAssembly.setupModule()
+//        window?.makeKeyAndVisible()
+        #warning("не забыть вернуть как было")
+        window?.rootViewController = ProfileAssembly.setupModule()
         window?.makeKeyAndVisible()
     }
 

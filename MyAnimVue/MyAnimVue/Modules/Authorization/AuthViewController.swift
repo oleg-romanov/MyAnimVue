@@ -67,7 +67,7 @@ final class AuthViewController: UIViewController {
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.mediumText
+        label.font = UIFont.mediumLargeText
         label.textColor = UIColor(named: Constants.descriptionTextColor)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = .zero
