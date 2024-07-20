@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA103C892C427B8F00DD8DA3 /* StarsRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA103C882C427B8F00DD8DA3 /* StarsRatingView.swift */; };
+		EA103C8B2C451E4000DD8DA3 /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA103C8A2C451E4000DD8DA3 /* UILabel + Extensions.swift */; };
 		EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */; };
 		EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */; };
 		EA195DCC2AD99FCE00C8A309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA195DCB2AD99FCE00C8A309 /* Assets.xcassets */; };
@@ -34,6 +36,14 @@
 		EA3BCF2F2C37203E004DB43B /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */; };
 		EA3BCF312C37204A004DB43B /* OnboardingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */; };
 		EA3BCF332C372579004DB43B /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */; };
+		EA3BCF352C37D7EA004DB43B /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF342C37D7EA004DB43B /* Tabbar.swift */; };
+		EA3BCF382C37DE17004DB43B /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF372C37DE17004DB43B /* ProfileAssembly.swift */; };
+		EA3BCF3A2C37DE32004DB43B /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF392C37DE32004DB43B /* ProfileProtocols.swift */; };
+		EA3BCF3C2C37DED1004DB43B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF3B2C37DED1004DB43B /* ProfileViewController.swift */; };
+		EA3BCF3E2C37DEF1004DB43B /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF3D2C37DEF1004DB43B /* ProfilePresenter.swift */; };
+		EA3BCF402C37DEFD004DB43B /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF3F2C37DEFD004DB43B /* ProfileInteractor.swift */; };
+		EA3BCF422C37DF09004DB43B /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF412C37DF09004DB43B /* ProfileRouter.swift */; };
+		EA3BCF462C387E08004DB43B /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BCF452C387E08004DB43B /* ProfileHeaderView.swift */; };
 		EA3D310A2B48335000D637A8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3D31092B48334F00D637A8 /* Config.plist */; };
 		EA59E0192B0D2D0200A49694 /* WebViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E0182B0D2D0200A49694 /* WebViewAssembly.swift */; };
 		EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */; };
@@ -52,6 +62,10 @@
 		EA9E4BE92AECF57C00D00A7B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BE82AECF57C00D00A7B /* Grid.swift */; };
 		EA9E4BEB2AEE371B00D00A7B /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BEA2AEE371B00D00A7B /* AuthRouter.swift */; };
 		EA9E4BEF2AEE50B700D00A7B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BEE2AEE50B700D00A7B /* WebViewController.swift */; };
+		EAAB74D02C395E79007CCFA8 /* BlockTitlesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB74CF2C395E79007CCFA8 /* BlockTitlesCell.swift */; };
+		EAAB74D22C3ACE65007CCFA8 /* ProfileEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB74D12C3ACE65007CCFA8 /* ProfileEntities.swift */; };
+		EAAB74D42C3AD8A2007CCFA8 /* PreviewTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB74D32C3AD8A2007CCFA8 /* PreviewTitleCell.swift */; };
+		EAAB74D62C3E8B2D007CCFA8 /* ProfileTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAB74D52C3E8B2D007CCFA8 /* ProfileTableSectionHeaderView.swift */; };
 		EAD271482C348E1800316423 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD271472C348E1800316423 /* APIError.swift */; };
 		EADB29852BA07B5B00135D2C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB29842BA07B5B00135D2C /* Response.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA103C882C427B8F00DD8DA3 /* StarsRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsRatingView.swift; sourceTree = "<group>"; };
+		EA103C8A2C451E4000DD8DA3 /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
 		EA195DBF2AD99FCB00C8A309 /* MyAnimVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAnimVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA195DC22AD99FCB00C8A309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA195DC42AD99FCB00C8A309 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +120,14 @@
 		EA3BCF2E2C37203E004DB43B /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		EA3BCF302C37204A004DB43B /* OnboardingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssembly.swift; sourceTree = "<group>"; };
 		EA3BCF322C372579004DB43B /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		EA3BCF342C37D7EA004DB43B /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		EA3BCF372C37DE17004DB43B /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		EA3BCF392C37DE32004DB43B /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		EA3BCF3B2C37DED1004DB43B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EA3BCF3D2C37DEF1004DB43B /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		EA3BCF3F2C37DEFD004DB43B /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		EA3BCF412C37DF09004DB43B /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		EA3BCF452C387E08004DB43B /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		EA3D31092B48334F00D637A8 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		EA59E0182B0D2D0200A49694 /* WebViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAssembly.swift; sourceTree = "<group>"; };
 		EA59E01A2B0D2F9100A49694 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
@@ -122,6 +146,10 @@
 		EA9E4BE82AECF57C00D00A7B /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		EA9E4BEA2AEE371B00D00A7B /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		EA9E4BEE2AEE50B700D00A7B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EAAB74CF2C395E79007CCFA8 /* BlockTitlesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTitlesCell.swift; sourceTree = "<group>"; };
+		EAAB74D12C3ACE65007CCFA8 /* ProfileEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntities.swift; sourceTree = "<group>"; };
+		EAAB74D32C3AD8A2007CCFA8 /* PreviewTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTitleCell.swift; sourceTree = "<group>"; };
+		EAAB74D52C3E8B2D007CCFA8 /* ProfileTableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableSectionHeaderView.swift; sourceTree = "<group>"; };
 		EAD271472C348E1800316423 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		EADB29842BA07B5B00135D2C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +235,7 @@
 		EA195DF22AD9A32100C8A309 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EA3BCF362C37DE02004DB43B /* Profile */,
 				EA3BCF1E2C3688C6004DB43B /* Onboarding */,
 				EA195DF32AD9A32E00C8A309 /* Authorization */,
 			);
@@ -267,6 +296,7 @@
 				EA195E1F2ADC29E100C8A309 /* UIViewController+Extensions.swift */,
 				EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */,
 				EA3BCF282C371D70004DB43B /* UIWindow+Extensions.swift */,
+				EA103C8A2C451E4000DD8DA3 /* UILabel + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +323,39 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EA3BCF362C37DE02004DB43B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EA3BCF432C387DE6004DB43B /* View */,
+				EA3BCF372C37DE17004DB43B /* ProfileAssembly.swift */,
+				EA3BCF392C37DE32004DB43B /* ProfileProtocols.swift */,
+				EA3BCF3B2C37DED1004DB43B /* ProfileViewController.swift */,
+				EA3BCF3F2C37DEFD004DB43B /* ProfileInteractor.swift */,
+				EA3BCF3D2C37DEF1004DB43B /* ProfilePresenter.swift */,
+				EAAB74D12C3ACE65007CCFA8 /* ProfileEntities.swift */,
+				EA3BCF412C37DF09004DB43B /* ProfileRouter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EA3BCF432C387DE6004DB43B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA3BCF442C387DF7004DB43B /* Cell */,
+				EA3BCF452C387E08004DB43B /* ProfileHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA3BCF442C387DF7004DB43B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EAAB74CF2C395E79007CCFA8 /* BlockTitlesCell.swift */,
+				EAAB74D32C3AD8A2007CCFA8 /* PreviewTitleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		EA9E4BD52AEC37E200D00A7B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +374,8 @@
 				EA9E4BE32AECEB4300D00A7B /* StartButton.swift */,
 				EA59E01C2B0DE70C00A49694 /* LoadingView.swift */,
 				EA3BCF212C36A043004DB43B /* NextButton.swift */,
+				EAAB74D52C3E8B2D007CCFA8 /* ProfileTableSectionHeaderView.swift */,
+				EA103C882C427B8F00DD8DA3 /* StarsRatingView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -319,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9E4BE82AECF57C00D00A7B /* Grid.swift */,
+				EA3BCF342C37D7EA004DB43B /* Tabbar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -481,25 +547,36 @@
 				EA195DF52AD9A34C00C8A309 /* AuthProtocols.swift in Sources */,
 				EA3BCF292C371D70004DB43B /* UIWindow+Extensions.swift in Sources */,
 				EA9E4BE92AECF57C00D00A7B /* Grid.swift in Sources */,
+				EA3BCF352C37D7EA004DB43B /* Tabbar.swift in Sources */,
 				EA3BCF2D2C372033004DB43B /* OnboardingProtocols.swift in Sources */,
+				EAAB74D42C3AD8A2007CCFA8 /* PreviewTitleCell.swift in Sources */,
 				EA5B15622AF170D300E56A26 /* WebViewInteractor.swift in Sources */,
+				EA3BCF422C37DF09004DB43B /* ProfileRouter.swift in Sources */,
 				EA9E4BEF2AEE50B700D00A7B /* WebViewController.swift in Sources */,
+				EAAB74D02C395E79007CCFA8 /* BlockTitlesCell.swift in Sources */,
+				EA3BCF3A2C37DE32004DB43B /* ProfileProtocols.swift in Sources */,
 				EA2101552B7CACC900C3D767 /* Request.swift in Sources */,
+				EA103C8B2C451E4000DD8DA3 /* UILabel + Extensions.swift in Sources */,
 				EA5D99992C35860900436745 /* AuthPresenter.swift in Sources */,
+				EA3BCF402C37DEFD004DB43B /* ProfileInteractor.swift in Sources */,
 				EA2101572B7CAD3B00C3D767 /* APIClient.swift in Sources */,
 				EA59E01B2B0D2F9100A49694 /* WebViewRouter.swift in Sources */,
 				EA195DF72AD9A3AC00C8A309 /* AuthViewController.swift in Sources */,
 				EA3BCF272C36C33B004DB43B /* Slide.swift in Sources */,
 				EA59E0192B0D2D0200A49694 /* WebViewAssembly.swift in Sources */,
+				EA3BCF462C387E08004DB43B /* ProfileHeaderView.swift in Sources */,
 				EA195E202ADC29E100C8A309 /* UIViewController+Extensions.swift in Sources */,
 				EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */,
 				EA195E082AD9B1B400C8A309 /* APIConstants.swift in Sources */,
+				EA3BCF3E2C37DEF1004DB43B /* ProfilePresenter.swift in Sources */,
 				EA195E142ADC033400C8A309 /* Keychain.swift in Sources */,
 				EA195E192ADC044400C8A309 /* Keys.swift in Sources */,
 				EA9E4BEB2AEE371B00D00A7B /* AuthRouter.swift in Sources */,
 				EA3BCF202C368969004DB43B /* OnboardingViewController.swift in Sources */,
 				EADB29852BA07B5B00135D2C /* Response.swift in Sources */,
+				EA103C892C427B8F00DD8DA3 /* StarsRatingView.swift in Sources */,
 				EA3BCF312C37204A004DB43B /* OnboardingAssembly.swift in Sources */,
+				EAAB74D22C3ACE65007CCFA8 /* ProfileEntities.swift in Sources */,
 				EA59E01D2B0DE70C00A49694 /* LoadingView.swift in Sources */,
 				EA3BCF2B2C372027004DB43B /* OnboardingRouter.swift in Sources */,
 				EA5D999B2C35890000436745 /* AuthInteractor.swift in Sources */,
@@ -510,9 +587,12 @@
 				EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */,
 				EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */,
 				EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */,
+				EAAB74D62C3E8B2D007CCFA8 /* ProfileTableSectionHeaderView.swift in Sources */,
 				EAD271482C348E1800316423 /* APIError.swift in Sources */,
 				EA3BCF222C36A043004DB43B /* NextButton.swift in Sources */,
+				EA3BCF3C2C37DED1004DB43B /* ProfileViewController.swift in Sources */,
 				EA9E4BE42AECEB4300D00A7B /* StartButton.swift in Sources */,
+				EA3BCF382C37DE17004DB43B /* ProfileAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,8 +766,7 @@
 				INFOPLIST_FILE = MyAnimVue/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,8 +796,7 @@
 				INFOPLIST_FILE = MyAnimVue/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
