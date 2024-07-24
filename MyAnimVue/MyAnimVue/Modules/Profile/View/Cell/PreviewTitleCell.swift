@@ -101,14 +101,14 @@ final class PreviewTitleCell: UICollectionViewCell {
     }
     
     private func commonInit() {
-        setup()
+        setupStyle()
         addSubviews()
         makeConstraints()
     }
     
     // MARK: Setup
     
-    private func setup() {
+    private func setupStyle() {
         backgroundColor = .clear
     }
     

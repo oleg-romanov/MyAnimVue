@@ -27,7 +27,7 @@ final class ProfileHeaderView: UIView {
     private struct Appearance: Grid {
         let applicationLogoWidth: CGFloat = 150
         let titleLabelTopAnchor: CGFloat = 59
-        let separatorViewHeight: CGFloat = 2
+        let separatorViewHeight: CGFloat = 1
     }
     
     // MARK: Instance Properties

@@ -54,6 +54,7 @@
 		EA5B15662AF2385E00E56A26 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */; };
 		EA5D99992C35860900436745 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D99982C35860900436745 /* AuthPresenter.swift */; };
 		EA5D999B2C35890000436745 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5D999A2C35890000436745 /* AuthInteractor.swift */; };
+		EA5F95AD2C50F7430070B641 /* FavoriteTitlesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95AC2C50F7430070B641 /* FavoriteTitlesCell.swift */; };
 		EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */; };
 		EA9E4BDF2AEC39E600D00A7B /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */; };
 		EA9E4BE12AEC3B8700D00A7B /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4BE02AEC3B8700D00A7B /* Nunito-Medium.ttf */; };
@@ -138,6 +139,7 @@
 		EA5B15652AF2385E00E56A26 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		EA5D99982C35860900436745 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
 		EA5D999A2C35890000436745 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		EA5F95AC2C50F7430070B641 /* FavoriteTitlesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTitlesCell.swift; sourceTree = "<group>"; };
 		EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		EA9E4BE02AEC3B8700D00A7B /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				EAAB74CF2C395E79007CCFA8 /* BlockTitlesCell.swift */,
 				EAAB74D32C3AD8A2007CCFA8 /* PreviewTitleCell.swift */,
+				EA5F95AC2C50F7430070B641 /* FavoriteTitlesCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				EA5D999B2C35890000436745 /* AuthInteractor.swift in Sources */,
 				EA195E1D2ADC266800C8A309 /* AuthAssembly.swift in Sources */,
 				EA3BCF252C36BF34004DB43B /* SlideCell.swift in Sources */,
+				EA5F95AD2C50F7430070B641 /* FavoriteTitlesCell.swift in Sources */,
 				EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */,
 				EA3BCF2F2C37203E004DB43B /* OnboardingPresenter.swift in Sources */,
 				EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */,

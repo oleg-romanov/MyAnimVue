@@ -23,8 +23,13 @@ final class ProfileViewController: UIViewController {
         static let leftSegmentControlItemName = "Shikimori"
         static let rightSegmentControlItemName = "Anilibria"
         
+        static let favoriteTitlesCellIdentifier: String = "FavoriteTitlesCell"
         static let blockTitlesCellIdentifier: String = "BlockTitlesCell"
         static let numberOfRowsInSection: Int = 1
+    }
+    
+    private enum TableViewSection: Int, CaseIterable {
+        case favorites = 0
     }
     
     private struct Appearance: Grid {
@@ -69,6 +74,7 @@ final class ProfileViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.register(BlockTitlesCell.self, forCellReuseIdentifier: Constants.blockTitlesCellIdentifier)
+        tableView.register(FavoriteTitlesCell.self, forCellReuseIdentifier: Constants.favoriteTitlesCellIdentifier)
         tableView.tableHeaderView = headerView
         tableView.rowHeight = UITableView.automaticDimension
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -147,7 +153,7 @@ extension ProfileViewController: ProfileDisplayLogic {
 extension ProfileViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
+        return data.count + TableViewSection.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -155,34 +161,69 @@ extension ProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: Constants.blockTitlesCellIdentifier,
-            for: indexPath
-        ) as? BlockTitlesCell
-        else {
-            return UITableViewCell()
+        switch indexPath.section {
+            case TableViewSection.favorites.rawValue:
+                guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: Constants.favoriteTitlesCellIdentifier,
+                    for: indexPath
+                ) as? FavoriteTitlesCell else { return UITableViewCell() }
+                
+                return cell
+                
+            default:
+                guard let cell = tableView.dequeueReusableCell(
+                    withIdentifier: Constants.blockTitlesCellIdentifier,
+                    for: indexPath
+                ) as? BlockTitlesCell else { return UITableViewCell() }
+                
+                let item = data[indexPath.section - TableViewSection.allCases.count]
+                cell.selectionStyle = .none
+                cell.configure(with: item)
+                
+                return cell
         }
-        let item = data[indexPath.section]
-        cell.selectionStyle = .none
-        cell.configure(with: item)
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return appearance.heightForHeaderInSection
+        switch section {
+            case TableViewSection.favorites.rawValue:
+                return .zero
+            default:
+                return appearance.heightForHeaderInSection
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .zero
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = data[section].first else { return nil }
-        let headerView = ProfileTableSectionHeaderView()
-        headerView.configure(blockName: header.blockName, titlesCount: data[section].count)
+        guard let header = data[section - TableViewSection.allCases.count].first else { return nil }
         
-        return headerView
+        let headerView = ProfileTableSectionHeaderView()
+        headerView.configure(blockName: header.blockName, titlesCount: data[section - TableViewSection.allCases.count].count)
+        
+        switch section {
+            case TableViewSection.favorites.rawValue:
+                return nil
+            default:
+                return headerView
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension ProfileViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
