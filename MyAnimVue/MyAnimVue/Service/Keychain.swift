@@ -14,7 +14,7 @@ final class Keychain {
     
     // MARK: Properties
     
-    public static let service = Keychain()
+    static let service = Keychain()
     
     private let keychain = KeychainSwift(keyPrefix: Keys.keyPrefix)
     
@@ -32,6 +32,18 @@ final class Keychain {
         return keychain.set(value, forKey: Keys.shikimoriAuthCode)
     }
     
+    func saveShikimoriTokens(accessToken: String, refreshToken: String) -> Bool {
+        return saveShikimoriAccessToken(value: accessToken) && saveShikimoriRefreshToken(value: refreshToken)
+    }
+    
+    func saveShikimoriAccessToken(value: String) -> Bool {
+        return keychain.set(value, forKey: Keys.shikimoriAccessToken)
+    }
+    
+    func saveShikimoriRefreshToken(value: String) -> Bool {
+        return keychain.set(value, forKey: Keys.shikimoriRefreshToken)
+    }
+    
     // MARK: Get Values
     
     func getValue(for key: String) -> String? {
@@ -44,6 +56,14 @@ final class Keychain {
     
     func getShikimoriAuthCode() -> String? {
         return keychain.get(Keys.shikimoriAuthCode)
+    }
+    
+    func getShikimoriAccessToken() -> String? {
+        return keychain.get(Keys.shikimoriAccessToken)
+    }
+    
+    func getShikimoriRefreshToken() -> String? {
+        return keychain.get(Keys.shikimoriRefreshToken)
     }
     
     // MARK: Get all keyes
@@ -64,6 +84,18 @@ final class Keychain {
     
     func deleteShikimoriAuthCode() -> Bool {
         return keychain.delete(Keys.shikimoriAuthCode)
+    }
+    
+    func deleteShikimoriAccessToken() -> Bool {
+        return keychain.delete(Keys.shikimoriAccessToken)
+    }
+    
+    func deleteShikimoriRefreshToken() -> Bool {
+        return keychain.delete(Keys.shikimoriRefreshToken)
+    }
+    
+    func deleteShikimoriTokens() -> Bool {
+        return deleteShikimoriAccessToken() && deleteShikimoriRefreshToken()
     }
     
     // MARK: Delete all values from keychain

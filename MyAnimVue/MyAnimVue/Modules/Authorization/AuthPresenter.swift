@@ -47,6 +47,10 @@ final class AuthPresenter: AuthPresentationLogic {
         view.displayStartButtonActiveState()
     }
     
+    func presentError(with message: String) {
+        view.displayErrorAlert(with: message)
+    }
+    
     func routeToTabbar() {
         router.routeToTabbar()
     }

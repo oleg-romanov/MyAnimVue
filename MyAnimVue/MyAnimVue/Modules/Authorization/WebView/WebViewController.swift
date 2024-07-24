@@ -68,12 +68,12 @@ final class WebViewController: UIViewController {
         makeConstraints()
         setup()
         #warning("Временно для отладки чистятся все куки при каждом запуске")
-        HTTPCookieStorage.shared.removeCookies(since: .distantPast)
-        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
-            records.forEach { record in
-                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
-            }
-        }
+//        HTTPCookieStorage.shared.removeCookies(since: .distantPast)
+//        WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
+//            records.forEach { record in
+//                WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
+//            }
+//        }
     }
     
     deinit {

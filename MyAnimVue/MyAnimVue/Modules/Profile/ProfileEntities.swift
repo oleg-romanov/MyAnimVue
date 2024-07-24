@@ -69,13 +69,13 @@ struct AnimeShiki: Codable {
     let russian: String
     let image: AnimeImage
     let url: String
-    let kind: String
+    let kind: String?
     let score: String
     let status: String
     let episodes: Int
-    let episodesAired: Int
-    let airedOn: String 
-    let releasedOn: String
+    let episodesAired: Int?
+    let airedOn: String?
+    let releasedOn: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name, russian, image, url, kind, score, status, episodes

@@ -7,7 +7,8 @@
 import Foundation
 
 enum APIConstants {
-    static let host = "https://api.anilibria.tv/v3/"
+    static let hostShikimori = "https://shikimori.one/api"
+    static let hostAnilibria = "https://api.anilibria.tv/v3"
     static let responseType = "token"
     
     static func obtainClientId() -> String {

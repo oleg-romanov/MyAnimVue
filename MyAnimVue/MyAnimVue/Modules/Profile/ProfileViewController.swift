@@ -89,7 +89,9 @@ final class ProfileViewController: UIViewController {
         addSubviews()
         makeConstraints()
         
-        presenter.fetchTitlesInfo()
+        Task {
+            await presenter.fetchTitlesInfo()
+        }
     }
     
     // MARK: Setup
@@ -143,8 +145,16 @@ final class ProfileViewController: UIViewController {
 extension ProfileViewController: ProfileDisplayLogic {
     
     func displayTitlesInfo(with models: [[PreviewTitleModel]]) {
-        data = models
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.data = models
+            self.tableView.reloadData()
+        }
+    }
+    
+    func displayError(with message: String) {
+        DispatchQueue.main.async {
+            self.showErrorAlert(message: message)
+        }
     }
 }
 

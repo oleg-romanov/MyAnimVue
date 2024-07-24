@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Request<Response>: @unchecked Sendable {
+struct Request<Response>: @unchecked Sendable {
     var method: HTTPMethod
     var url: URL?
     var query: [String: String]?

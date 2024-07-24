@@ -9,15 +9,17 @@ import Foundation
 
 protocol ProfileDisplayLogic: AnyObject {
     func displayTitlesInfo(with models: [[PreviewTitleModel]])
+    func displayError(with message: String)
 }
 
 protocol ProfilePresentationLogic: AnyObject {
-    func fetchTitlesInfo()
+    func fetchTitlesInfo() async
     func presentTitlesInfo(with models: [[PreviewTitleModel]])
+    func presentError(with message: String)
 }
 
 protocol ProfileBusinessLogic: AnyObject {
-    func fetchTitlesInfo()
+    func fetchTitlesInfo() async
 }
 
 protocol ProfileRoutingLogic: AnyObject {
