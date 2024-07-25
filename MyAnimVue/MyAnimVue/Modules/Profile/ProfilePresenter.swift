@@ -17,11 +17,15 @@ final class ProfilePresenter: ProfilePresentationLogic {
     
     // MARK: Instance Methods
     
-    func fetchTitlesInfo() {
-        interactor.fetchTitlesInfo()
+    func fetchTitlesInfo() async {
+        await interactor.fetchTitlesInfo()
     }
     
     func presentTitlesInfo(with models: [[PreviewTitleModel]]) {
         view.displayTitlesInfo(with: models)
+    }
+    
+    func presentError(with message: String) {
+        view.displayError(with: message)
     }
 }

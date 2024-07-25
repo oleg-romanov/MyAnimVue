@@ -7,7 +7,7 @@
 
 import Foundation 
 
-public enum APIError: Error, LocalizedError {
+enum APIError: Error, LocalizedError {
     case unacceptableStatusCode(Int)
     case incorrectResponse
     case invalidAPIKey
@@ -15,7 +15,7 @@ public enum APIError: Error, LocalizedError {
     case tooManyRequests
     case serverError
 
-    public var errorDescription: String? {
+    var errorDescription: String? {
         switch self {
             case .unacceptableStatusCode(let statusCode):
                 return "Неожиданный статусный код ответа сервера: \(statusCode)."

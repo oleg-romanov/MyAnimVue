@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Response<T> {
+struct Response<T> {
     let value: T
     let response: URLResponse
     var statusCode: Int? { (response as? HTTPURLResponse)?.statusCode }
@@ -19,7 +19,7 @@ public struct Response<T> {
         self.response = response
     }
     
-    public func map<E>(_ closure: (T) throws -> E) rethrows -> Response<E> {
+    func map<E>(_ closure: (T) throws -> E) rethrows -> Response<E> {
         Response<E>(value: try closure(value), data: data, response: response)
     }
 }
