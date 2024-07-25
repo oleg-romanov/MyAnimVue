@@ -19,6 +19,8 @@ final class PreviewTitleCell: UICollectionViewCell {
         static let primaryColorName: String = "PrimaryColor"
         static let lightGrayColorName: String = "LightGrayColor"
         
+        static let imagesHostUrlString: String = "https://desu.shikimori.one"
+        
         static let epicodesLabelText: String = "Эпизоды: "
         /// = 2
         static let titleRussianNameLabelNumberOfLines: Int = 2
@@ -41,12 +43,12 @@ final class PreviewTitleCell: UICollectionViewCell {
     
     private let appearance: Appearance = Appearance()
     
-    private lazy var posterImageView: UIImageView = {
-        let imageView = UIImageView()
-        // TODO: Убрать мок-значение после реализации получения постера из сети
-        imageView.image = UIImage(named: "AppLogoMini")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+    private lazy var posterImageView: AsyncImageView = {
+        let imageView = AsyncImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.layer.cornerRadius = Constants.posterImageViewCornerRadiud
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -214,5 +216,8 @@ final class PreviewTitleCell: UICollectionViewCell {
         subtitleEnglishNameLabel.setAttributedText(model.englishTitleName, lineHeight: Constants.subtitleLineHeight)
         countEpisodesLabel.setAttributedText("\(Constants.epicodesLabelText)\(model.episodesWathed)/\(model.episodesTotal)", lineHeight: Constants.episodesLineHeight)
         ratingView.configure(with: model.rating)
+        posterImageView.loadAsyncFrom(
+            url: Constants.imagesHostUrlString + model.posterImageString, placeholder: nil
+        )
     }
 }

@@ -85,18 +85,29 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupStyle()
         addSubviews()
         makeConstraints()
-        
+//        tabBarController?.tabBar.barTintColor = .green
+//        tabBarController?.tabBar.isTranslucent = false
         Task {
             await presenter.fetchTitlesInfo()
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     // MARK: Setup
     
-    private func setup() {
+    private func setupStyle() {
         view.backgroundColor = UIColor(named: Constants.backgroundColor)
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0

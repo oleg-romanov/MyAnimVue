@@ -58,6 +58,7 @@
 		EA5F95AF2C5128020070B641 /* APIClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95AE2C5128020070B641 /* APIClientDelegate.swift */; };
 		EA5F95B12C512EA00070B641 /* BottomErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95B02C512EA00070B641 /* BottomErrorView.swift */; };
 		EA5F95B32C5140580070B641 /* AuthEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95B22C5140580070B641 /* AuthEntities.swift */; };
+		EA5F95B52C528DB00070B641 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F95B42C528DB00070B641 /* AsyncImageView.swift */; };
 		EA9E4BD42AEC359100D00A7B /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */; };
 		EA9E4BDF2AEC39E600D00A7B /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */; };
 		EA9E4BE12AEC3B8700D00A7B /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4BE02AEC3B8700D00A7B /* Nunito-Medium.ttf */; };
@@ -146,6 +147,7 @@
 		EA5F95AE2C5128020070B641 /* APIClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientDelegate.swift; sourceTree = "<group>"; };
 		EA5F95B02C512EA00070B641 /* BottomErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomErrorView.swift; sourceTree = "<group>"; };
 		EA5F95B22C5140580070B641 /* AuthEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntities.swift; sourceTree = "<group>"; };
+		EA5F95B42C528DB00070B641 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		EA9E4BD32AEC359100D00A7B /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		EA9E4BDE2AEC39E600D00A7B /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		EA9E4BE02AEC3B8700D00A7B /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				EAAB74D52C3E8B2D007CCFA8 /* ProfileTableSectionHeaderView.swift */,
 				EA103C882C427B8F00DD8DA3 /* StarsRatingView.swift */,
 				EA5F95B02C512EA00070B641 /* BottomErrorView.swift */,
+				EA5F95B42C528DB00070B641 /* AsyncImageView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				EA5F95AD2C50F7430070B641 /* FavoriteTitlesCell.swift in Sources */,
 				EA195DC32AD99FCB00C8A309 /* AppDelegate.swift in Sources */,
 				EA3BCF2F2C37203E004DB43B /* OnboardingPresenter.swift in Sources */,
+				EA5F95B52C528DB00070B641 /* AsyncImageView.swift in Sources */,
 				EA5B15642AF1712500E56A26 /* WebViewProtocols.swift in Sources */,
 				EA195DC52AD99FCB00C8A309 /* SceneDelegate.swift in Sources */,
 				EA5F95B32C5140580070B641 /* AuthEntities.swift in Sources */,

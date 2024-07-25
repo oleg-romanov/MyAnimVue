@@ -85,7 +85,7 @@ final class ProfileInteractor: ProfileBusinessLogic {
             posterImageString: item.anime.image.preview,
             russianTitleName: item.anime.russian,
             englishTitleName: item.anime.name,
-            episodesTotal: item.episodes,
+            episodesTotal: item.anime.episodes,
             episodesWathed: item.episodes,
             rating: Double(item.anime.score) ?? 0
         )
