@@ -7,25 +7,27 @@
 
 import Foundation
 
-public actor APIClient {
+final actor APIClient {
     
     // MARK: Instance Properties
     
-    public nonisolated let configuration: Configuration
+    nonisolated let configuration: Configuration
     
-    public nonisolated let session: URLSession
+    private nonisolated let session: URLSession
 
     private let decoder: JSONDecoder
     private let encoder: JSONEncoder
     
-    public struct Configuration: @unchecked Sendable {
-        public var baseURL: URL?
-        public var sessionConfiguration: URLSessionConfiguration = .default
-        public var sessionDelegate: URLSessionDelegate?
-        public var decoder: JSONDecoder
-        public var encoder: JSONEncoder
+    var delegate: APIClientDelegate = APIDelegate()
+    
+    struct Configuration: @unchecked Sendable {
+        var baseURL: URL?
+        var sessionConfiguration: URLSessionConfiguration = .default
+        var sessionDelegate: URLSessionDelegate?
+        var decoder: JSONDecoder
+        var encoder: JSONEncoder
 
-        public init(
+        init(
             baseURL: URL?,
             sessionConfiguration: URLSessionConfiguration = .default
         ) {
@@ -40,13 +42,13 @@ public actor APIClient {
     
     // MARK: Initializers
     
-    public init(baseURL: URL?, _ configure: @Sendable (inout APIClient.Configuration) -> Void) {
+    init(baseURL: URL?, _ configure: @Sendable (inout APIClient.Configuration) -> Void = {_ in }) {
         var configuration = Configuration(baseURL: baseURL)
         configure(&configuration)
         self.init(configuration: configuration)
     }
     
-    public init(configuration: Configuration) {
+    init(configuration: Configuration) {
         self.configuration = configuration
         self.session = URLSession(configuration: configuration.sessionConfiguration)
         self.decoder = configuration.decoder
@@ -55,17 +57,17 @@ public actor APIClient {
     
     // MARK: Instance Methods
     
-    @discardableResult public func send<T: Decodable>(
+    @discardableResult func send<T: Decodable>(
         _ request: Request<T>,
         delegate: URLSessionDataDelegate? = nil,
         configure: ((inout URLRequest) throws -> Void)? = nil
     ) async throws -> Response<T> {
         let response = try await data(for: request, delegate: delegate, configure: configure)
-        let value: T = try await decode(response.data, using: decoder)
+        let value: T = try await decode(response.data, using: JSONDecoder())
         return response.map { _ in value }
     }
     
-    public func data<T>(
+    func data<T>(
             for request: Request<T>,
             delegate: URLSessionDataDelegate? = nil,
             configure: ((inout URLRequest) throws -> Void)? = nil
@@ -73,6 +75,8 @@ public actor APIClient {
             let request = try await makeURLRequest(for: request, configure)
             
             return try await performRequest {
+                var request = request
+                try await self.delegate.client(self, willSendRequest: &request)
                 let (data, response) = try await session.data(for: request)
                 try validate(response)
                 

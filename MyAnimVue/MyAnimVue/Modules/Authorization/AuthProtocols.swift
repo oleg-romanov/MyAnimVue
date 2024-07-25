@@ -18,6 +18,8 @@ protocol AuthPresentationLogic: AnyObject {
     func presentCheckmarkShikimoriCircleView()
     func presentStartButtonActiveState()
     
+    func presentError(with message: String)
+    
     func routeToTabbar()
 }
 

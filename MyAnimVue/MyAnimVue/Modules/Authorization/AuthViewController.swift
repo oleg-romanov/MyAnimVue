@@ -234,9 +234,9 @@ final class AuthViewController: UIViewController {
 extension AuthViewController: AuthViewDisplayLogic, AuthDelegate {
     
     func displayErrorAlert(with message: String) {
-        let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(errorAlert, animated: true)
+        DispatchQueue.main.async {
+            self.showErrorAlert(message: message)
+        }
     }
     
     func displayCheckmarkAnilibriaCircleView() {
@@ -248,7 +248,9 @@ extension AuthViewController: AuthViewDisplayLogic, AuthDelegate {
     }
     
     func displayStartButtonActiveState() {
-        startButton.setActive()
+        DispatchQueue.main.async {
+            self.startButton.setActive()
+        }
     }
     
     func result(isSuccess: Bool) {
